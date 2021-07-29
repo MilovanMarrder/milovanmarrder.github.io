@@ -9,65 +9,169 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* cambie los margenes del formulario */
 .formulario {
   background-color: rgba(255, 255, 255, 0.3);
-  margin-top: 5%;
-  margin-left: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  width: 33%;
-  height: 33%;
   border-radius: 15px;
   font-size: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
-  animation-name: generado2;
-  animation-duration: 2s;
-  } 
-  
-  @keyframes generado2 {
-    0%   {right:-35%; }
-    100% {right:0%; }
-  
+  box-sizing: border-box;
+  width: 70%;
 }
-
+  
 body {
   background: linear-gradient(to right, var(--verde), var(--naranja));
   font-family: "open sans", sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 5%;
 }
-input {
+input, select {
   background-color: rgba(255, 255, 255, 0.52);
   border: none;
   border-radius: 5px;
   height: 30px;
 }
-.firma1 {
+/* inicio formato para todas las plantillas de firmas */
+
+.firma1caja, .firma2caja, .firma3caja {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 75px;
+  margin-bottom: 40px;
   margin-right: 5%;
   padding-right: 5%;
-  width: 500px;
+  box-sizing: border-box;
+  width: 600px;
   border-radius: 15px;
   font-size: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
   
-  animation-name: generado1;
-  animation-duration: 2s;
-  }
-  
-  @keyframes generado1 {
-    0%   {left:-67%; }
-    100% {left:0%; }
-  
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
 }
-main {
-  display: flex;
-  align-items: center;
-  padding: 5%;
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* Final formato para toddas las plantillas de firmas */
+
+
+
+/* inicio plantilla 1 de firma */
+.firma1texto{
+          border:0; 
+          padding:0; 
+					color:#4c4b4c;
+					font-size:13px;
+					font-family:arial,helvetica neue,helvetica,sans-serif;
+
+  } 
+
+.celdaarea {
+  color:var(--naranja);
+  font-weight: bold;
+
+}
+
+/* final plantilla 1 de firma */
+
+/* Inicio plantilla 2 de firma */
+.firma2caja {
+  
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* final plantilla 2 de firma */
+
+/* Inicio plantilla 3 de firma */
+.firma3caja {
+  
+  animation: fadeIn 6s;
+  -webkit-animation: fadeIn 6s;
+  -moz-animation: fadeIn 6s;
+  -o-animation: fadeIn 6s;
+  -ms-animation: fadeIn 6s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* final plantilla 3 de firma */
 nav {
   position: fixed;
   top: 20px;
