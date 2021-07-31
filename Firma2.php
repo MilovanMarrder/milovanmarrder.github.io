@@ -22,14 +22,17 @@ if (isset($_POST['submit'])) {
 				echo "$web_empresa";
 
 				?>
-				"><img src="
+				"><img class="logofirma" src="
 				<?php
 				echo "$logo"; ?>
-				" width="150" height="92" /></a></td>
+				" width="150" height="92" style="
+  box-shadow: 0 0 10px rgba(244, 189, 60, 0.3);
+  border-radius: 5px 5px 5px 5px;
+  border-width: 0.05px;" /></a></td>
 				<!-- Aquí termina el td del logo -->
 				<!-- Estas td (Columna) conforman el separador vertical de color -->
 				<td style="width: 13px;"></td>
-				<td style="width: 2px; background-color: var(--naranja);"></td>
+				<td style="width: 1px; background-color: #f79d00;"></td>
 				<td style="width: 13px;"></td>
 				<!-- Hasta aquí el separador vertical (Verificar si se puede agregar sombra) -->
 				<!-- Aqui inicia la tablita de el texto -->
@@ -37,31 +40,37 @@ if (isset($_POST['submit'])) {
 					<table class="firma1texto">
 						<tbody>
 							<tr>
-								<td style=" font-size:15px; color:#4c4b4c; font-weight:bold;">
+								<td style=" font-size:16px; color:#000; font-weight:bold;">
 									<?php echo "$titulo $nombre"; ?>
 								</td>
 							</tr>
 							<tr>
 
-								<td class="celdaarea">
+								<td style="color:#4c4b4c;font-weight: bold;">
 									<?php
 									echo $area;
 									?>
 								</td>
 							</tr>
 							<tr>
-								<td style="height: 14px;">
-								<?php
-								if ($cel != null) {
-									echo "Cel: $cel";
-								}
-								?>
-							</td>
+
+								<td style="height: 12px;">
+									<!-- espacio entre area y telefonos -->
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 14px;color:#333333;">
+									<?php
+									if ($cel != null) {
+										echo "Cel: $cel";
+									}
+									?>
+								</td>
 							</tr>
 
 							<tr>
 
-								<td>
+								<td style="color:#333333;">
 									<?php
 									if ($tel != null) {
 										echo "Tel: $tel";
@@ -72,7 +81,7 @@ if (isset($_POST['submit'])) {
 								</td>
 							</tr>
 							<tr>
-								<td><a href="mailto:$mail">
+								<td><a style="color: #333333; text-decoration:none;" href="mailto:$mail">
 										<?php
 										if ($mail != null) {
 											echo $mail;

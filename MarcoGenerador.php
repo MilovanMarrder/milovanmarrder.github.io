@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <!-- En el siguiente div clase formulario tengo contenido el formulario -->
+  <!-- En el siguiente div clase formulario tengo contenido el formulario // También necesario para posicionamiento en pagina -->
   <div>
     <!-- La siguiente linea es para anexar el formulario configurado en form.php -->
     <?php include 'form.php'; ?>
