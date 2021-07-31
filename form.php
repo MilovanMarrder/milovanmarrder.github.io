@@ -17,7 +17,8 @@
         </div>
         <div class="row">
             <div class="col">
-                <Input type="text" id="area" name="area" placeholder="Departamento o área"></Input>
+                <Input type="text" id="area" name="area" placeholder="Puesto de trabajo"></Input>
+                <Input type="text" id="empresa" name="empresa" placeholder="Empresa"></Input>
             </div>
         </div>
         <div class="row">
@@ -56,6 +57,7 @@
                 <Input type="text" id="web" name="web" placeholder="Enlace al hacer clic en el logo"></Inpuut>
             </div>
         </div>
+        
     </div>
         <br>
     <div class="botones">

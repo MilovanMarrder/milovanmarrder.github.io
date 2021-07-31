@@ -21,8 +21,8 @@
                 </div>
             </nav>
             <div class="textos">
-                <h1>Generador de firma intuitiva para correo. </h1>
-                <h2>Personalice fácilmente su firma de correo electrónico.</h2>
+                <h1>Generador de firma para correo electrónico</h1>
+                <h2>Crea una firma profesional para tus correos</h2>
                 <a class="btn" href="/MarcoGenerador.php">Generar Firma</a>
             </div>
             <img src="vector.png" alt="" class="img_landing">

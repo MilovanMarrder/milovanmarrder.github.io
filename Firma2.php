@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) {
 	$logo = $_POST['logo'];
 	$web_empresa = $_POST['web'];
 	$cel = $_POST['cel'];
+	$empresa = $_POST['empresa'];
 }
 
 ?>
@@ -48,23 +49,19 @@ if (isset($_POST['submit'])) {
 
 								<td style="color:#4c4b4c;font-weight: bold;">
 									<?php
-									echo $area;
+									echo "$area | $empresa";
 									?>
 								</td>
 							</tr>
 							<tr>
 
 								<td style="height: 12px;">
-									<!-- espacio entre area y telefonos -->
+									<!-- espacio entre puesto de trabajo y telefonos -->
 								</td>
 							</tr>
 							<tr>
 								<td style="height: 14px;color:#333333;">
-									<?php
-									if ($cel != null) {
-										echo "Cel: $cel";
-									}
-									?>
+
 								</td>
 							</tr>
 
@@ -77,7 +74,11 @@ if (isset($_POST['submit'])) {
 									}
 									if ($ext != null) {
 										echo " Ext: $ext";
-									} ?>
+									} ?> | 									<?php
+									if ($cel != null) {
+										echo "Cel: $cel";
+									}
+									?>
 								</td>
 							</tr>
 							<tr>
