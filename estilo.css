@@ -20,12 +20,17 @@
   width: 70%;
 }
   
-body {
+.bodygenerador {
   background: linear-gradient(to right, var(--verde), var(--naranja));
   font-family: "open sans", sans-serif;
   display: flex;
   align-items: center;
   padding: 5%;
+}
+body {
+  background: linear-gradient(to right, var(--verde), var(--naranja));
+  font-family: "open sans", sans-serif;
+
 }
 input, select {
   background-color: rgba(255, 255, 255, 0.52);

@@ -58,7 +58,6 @@ if (isset($_POST['submit'])) {
 								?>
 							</td>
 							</tr>
-
 							<tr>
 
 								<td>
