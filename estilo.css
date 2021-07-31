@@ -17,7 +17,15 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
   box-sizing: border-box;
-  width: 70%;
+  padding: 5%;
+  width: 500px;
+  height: 550px;
+  margin-top: 50px;
+}
+
+label{
+  display: inline-block;
+  position: relative;
 }
   
 .bodygenerador {
@@ -26,6 +34,7 @@
   display: flex;
   align-items: center;
   padding: 5%;
+  padding-top: 0;
 }
 body {
   background: linear-gradient(to right, var(--verde), var(--naranja));
@@ -37,21 +46,46 @@ input, select {
   border: none;
   border-radius: 5px;
   height: 30px;
+  width: 70%;
+  margin: 1%;
+}
+.inputext{
+  background-color: rgba(255, 255, 255, 0.52);
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 70px;
+}
+select{
+  width: 70px;
+}
+.botones{
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.BotonDeFormulario:hover{
+  background: #dddddd;
 }
 /* inicio formato para todas las plantillas de firmas */
 
 .firma1caja, .firma2caja, .firma3caja {
   background-color: rgba(255, 255, 255, 0.3);
-  padding: 75px;
-  margin-bottom: 40px;
+  padding: 5%;
+  margin-top: 20px;
   margin-right: 5%;
   padding-right: 5%;
+  margin-bottom: 10px;
   box-sizing: border-box;
   width: 600px;
   border-radius: 15px;
   font-size: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
+  float: right;
   
   animation: fadeIn 2s;
   -webkit-animation: fadeIn 2s;
