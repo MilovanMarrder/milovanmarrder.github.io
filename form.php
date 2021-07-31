@@ -37,16 +37,18 @@
                 <Input type="text" id="mail" name="mail" placeholder="correo@outlook.com"></Input>
             </div>
         </div>
+        <!--  
         <div class="row">
             <div class="col">
-                <Input type="text" id="ubicacion" name="ubicacion" placeholder="Tegucigalpa, Honduras" cols="10" row="5"></Input>
+                <Input type="text" id="LinkedIn" name="LinkedIn" placeholder="Cuenta de LinkedIn"></Input>
             </div>
-        </div><br>
+        </div>
 
-        <!--  
+        
         <label for="foto">URL de fotografía (Opcional)</label>
         <Input type="text" id="foto" name="foto" placeholder="Pega aquí el URL de tu foto"></Inpuut>
         -->
+        <br>
         <div class="row">
             <div class="col">
                 <Input type="text" id="logo" name="logo" placeholder="Pega aquí el URL del logo de tu empresa"></Inpuut>

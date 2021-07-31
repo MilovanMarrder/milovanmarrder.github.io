@@ -10,6 +10,7 @@ if (isset($_POST['submit'])) {
 	$web_empresa = $_POST['web'];
 	$cel = $_POST['cel'];
 	$empresa = $_POST['empresa'];
+	$icono = $_POST['icono'];
 }
 
 ?>
@@ -23,7 +24,7 @@ if (isset($_POST['submit'])) {
 				echo "$web_empresa";
 
 				?>
-				"><img class="logofirma" src="
+				"><img class="logofirma" alt="Insertar Logo" src="
 				<?php
 				echo "$logo"; ?>
 				" width="150" height="92" style="
@@ -74,11 +75,11 @@ if (isset($_POST['submit'])) {
 									}
 									if ($ext != null) {
 										echo " Ext: $ext";
-									} ?> | 									<?php
-									if ($cel != null) {
-										echo "Cel: $cel";
-									}
-									?>
+									} ?> | <?php
+											if ($cel != null) {
+												echo "Cel: $cel";
+											}
+											?>
 								</td>
 							</tr>
 							<tr>
@@ -87,6 +88,7 @@ if (isset($_POST['submit'])) {
 										if ($mail != null) {
 											echo $mail;
 										} ?>
+
 									</a>
 								</td>
 							</tr>

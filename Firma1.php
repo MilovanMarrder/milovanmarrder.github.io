@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
 				echo "$web_empresa";
 
 				?>
-				"><img src="
+				"><img alt="Insertar logo" src="
 				<?php
 				echo "$logo"; ?>
 				" width="150" height="92" /></a></td>
