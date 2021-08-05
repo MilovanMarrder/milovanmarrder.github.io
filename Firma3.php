@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
 						<tbody>
 							<tr>
 								<td style=" font-size:16px; color:#000; font-weight:bold;">
-									<?php echo "$titulo $nombre"; ?>
+								<span id="preview_name">Anónimo</span>
 								</td>
 							</tr>
 							<tr>

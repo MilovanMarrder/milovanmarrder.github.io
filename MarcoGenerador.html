@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de firma</title>
+  <script type="text/javascript">
+            function V_nombre(texto)
+            {
+                document.getElementById('Vista_Nombre1').innerHTML = texto;
+            }
+  
+            function VisualiarTitulo(texto)
+            {
+                document.getElementById('Vista_titulo').innerHTML = texto;
+            }
+  
+            function V_Puesto(texto)
+            {
+                document.getElementById('Vista_puesto').innerHTML = texto;
+            }
+            function V_cel(texto)
+            {
+                document.getElementById('Vista_cel').innerHTML = texto;
+            }            
+            function V_tel(texto)
+            {
+                document.getElementById('Vista_tel').innerHTML = texto;
+            }            
+            function V_empresa(texto)
+            {
+                document.getElementById('Vista_empresa').innerHTML = texto;
+            }            
+            function V_mail(texto)
+            {
+                document.getElementById('Vista_mail').innerHTML = texto;
+            }
+        </script>
+</head>
+
+<body class="bodygenerador">
+  <!-- En el siguiente div clase formulario tengo contenido el formulario // También necesario para posicionamiento en pagina -->
+  <div>
+  <form action="" enctype="multipart/form-data" class="formulario">
+    <h2 style="color:rgb(35, 35, 35);">GENERANDO TU FIRMA DE CORREO</h2>
+    <div>
+        <div class="row">
+            <div class="col">
+                <select name="titulo" id="titulo" onkeyup="VisualiarTitulo(this.value)">
+                    <option value="">Ninguno</option>
+                    <option value="Lic.">Lic.</option>
+                    <option value="Licda.">Licda.</option>
+                    <option value="Ing.">Ing.</option>
+                    <option value="Dr.">Dr.</option>
+                    <option value="Dra.">Dra.</option>
+                    <option value="Oficial">Oficial</option>
+                </select>
+                <Input type="text" name="nombre" id="Nombre1" placeholder="Ingresa el nombre a mostrar" onkeyup="V_nombre(this.value)" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <Input type="text" id="puesto" name="area" placeholder="Puesto de trabajo" onkeyup="V_Puesto(this.value)"/>
+                <Input type="text" id="empresa" name="empresa" placeholder="Empresa" onkeyup="V_empresa(this.value)"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <Input type="text" id="cel" name="cel" placeholder="Teléfono movil"onkeyup="V_cel(this.value)"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <Input type="text" id="tel" name="tel" placeholder="Teléfono de la empresa" onkeyup="V_tel(this.value)" />
+                <Input class="inputext" type="text" id="ext" name="ext" placeholder="Extesión" onkeyup="V_Ext(this.value)"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <Input type="text" id="mail" name="mail" placeholder="correo@outlook.com" onkeyup="V_mail(this.value)"/>
+            </div>
+        </div>
+        <!--  
+        <div class="row">
+            <div class="col">
+                <Input type="text" id="LinkedIn" name="LinkedIn" placeholder="Cuenta de LinkedIn"></Input>
+            </div>
+        </div>
+
+        
+        <label for="foto">URL de fotografía (Opcional)</label>
+        <Input type="text" id="foto" name="foto" placeholder="Pega aquí el URL de tu foto"></Inpuut>
+        -->
+        <br>
+        <div class="row">
+            <div class="col">
+                <Input type="text" id="logo" name="logo" placeholder="Pega aquí el URL del logo de tu empresa"></Inpuut>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <Input type="text" id="web" name="web" placeholder="Enlace al hacer clic en el logo"></Inpuut>
+            </div>
+        </div>
+        
+    </div>
+        <br>
+    <div class="botones">
+        <input type="submit" class="BotonDeFormulario" name="submit" value="Guardar">
+        <input type="reset" class="BotonDeFormulario" value="Limpiar campos">
+    </div>   
+</form>
+
+  </div>
+  <!-- La siguiente linea es para anexar la firma generada configurada en Firma.php -->
+  <div class="firma3caja">
+	<table id="f3">
+		<tbody>
+			<tr>
+				<!-- En el siguiente td está el logo -->
+				<td><a href="#	"><img class="logofirma" alt="Insertar Logo" src="#"
+        width="150" height="92" style="
+  box-shadow: 0 0 10px rgba(244, 189, 60, 0.3);
+  border-radius: 5px 5px 5px 5px;
+  border-width: 0.05px;" /></a></td>
+				<!-- Aquí termina el td del logo -->
+				<!-- Estas td (Columna) conforman el separador vertical de color -->
+				<td style="width: 13px;"></td>
+				<td style="width: 1px; background-color: #f79d00;"></td>
+				<td style="width: 13px;"></td>
+				<!-- Hasta aquí el separador vertical (Verificar si se puede agregar sombra) -->
+				<!-- Aqui inicia la tablita de el texto -->
+				<td>
+					<table class="firma1texto">
+						<tbody>
+							<tr>
+								<td style=" font-size:16px; color:#000; font-weight:bold;">
+								<span id="Vista_Nombre1">Anónimo</span>
+								</td>
+							</tr>
+							<tr>
+
+								<td style="color:#4c4b4c;font-weight: bold;">
+                                    <span id="Vista_puesto">Puesto de trabajo</span>
+								</td>
+							</tr>
+							<tr>
+
+								<td style="height: 12px;">
+									<!-- espacio entre puesto de trabajo y telefonos -->
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 14px;color:#333333;">
+
+								</td>
+							</tr>
+
+							<tr>
+
+								<td style="color:#333333;">
+<span id="Vista_tel">22360900</span>
+								</td>
+							</tr>
+							<tr>
+								<td><a style="color: #333333; text-decoration:none;" href="mailto:$mail">
+                                    <span id="Vista_mail">Correo@Electrónico.com</span>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+<button class="botones" type="button" id="copyClip" data-clipboard-target="#firma3caja">Copiar firma</button>
+<script src="clipboard.min.js"></script>
+</body>
+
+</html>
