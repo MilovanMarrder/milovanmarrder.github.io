@@ -1,15 +1,21 @@
-let boton = document.getElementById("icono");
-let enlaces = document.getElementById("enlaces");
-let contador = 0;
-
-boton.addEventListener("click", function(e){
-    e.preventDefault();
-    if(contador==0){
-        enlaces.className = ("enlaces dos")
-        contador=1;
-    }else{
-        enlaces.classList.remove("dos")
-        enlaces.className = ("enlaces uno")
-        contador=0;
-    }
-})
+function V_nombre(texto) {
+  document.querySelector("#Vista_nombre").innerHTML = texto;
+}
+function VisualiarTitulo(texto) {
+  document.querySelector("#Visualizartitulo").innerHTML = texto;
+}
+function V_Puesto(texto) {
+  document.querySelector("#Vista_puesto").innerHTML = texto;
+}
+function V_cel(texto) {
+  document.querySelector("#Vista_cel").innerHTML = texto;
+}
+function V_tel(texto) {
+  document.querySelector("#Vista_tel").innerHTML = texto;
+}
+function V_empresa(texto) {
+  document.querySelector("#Vista_empresa").innerHTML = texto;
+}
+function V_mail(texto) {
+  document.querySelector("#Vista_mail").innerHTML = texto;
+}

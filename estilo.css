@@ -31,10 +31,13 @@ label{
 .bodygenerador {
   background: linear-gradient(to right, var(--verde), var(--naranja));
   font-family: "open sans", sans-serif;
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 5%;
   padding-top: 0;
+
 }
 body {
   background: linear-gradient(to right, var(--verde), var(--naranja));
@@ -267,7 +270,7 @@ header {
   display: block;
   height: 450px;
   object-fit: cover;
-  animation: arriba 1s ease-in;
+
 }
 
 .textos {
