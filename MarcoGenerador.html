@@ -14,7 +14,7 @@
   <!-- En el siguiente div clase formulario tengo contenido el formulario // También necesario para posicionamiento en pagina -->
   <div>
   <form class="formulario">
-    <h2 style="color:rgb(35, 35, 35);">GENERANDO TU FIRMA DE CORREO</h2>
+    <h2 style="color:rgb(35, 35, 35); text-align: center;">GENERANDO TU FIRMA INSTITUCIONAL</h2>
     <div>
         <div class="row">
             <div class="col">
@@ -25,48 +25,28 @@
         <div class="row">
             <div class="col">
                 <!-- Puesto del empleado // campo 2/6 -->
-                <Input type="text" id="puesto" name="area" placeholder="Puesto de trabajo" onkeyup="V_Puesto(this.value)"/>
+                <Input type="text" id="puesto" placeholder="Puesto de trabajo" onkeyup="V_Puesto(this.value)"/>
             </div>
         </div>
         <div class="row">
             <div class="col">
+                <Input type="text" id="Vista_tel" placeholder="Área o departamento"onkeyup="V_dept(this.value)"/>
+
                 <!-- Número de celular // campo 3/6 -->
-                <Input type="text" id="cel" name="cel" placeholder="Teléfono movil"onkeyup="V_cel(this.value)"/>
+                <Input type="text" id="cel" placeholder="Teléfono movil (Opcional)"onkeyup= "V_cel('+504 ' + this.value)"/>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <Input class="inputext" type="text" id="ext" name="ext" placeholder=" Teléfono 2236-0900 Extesión" onkeyup="V_Ext(this.value)"/>
+                <Input type="text" id="V_ext" placeholder="Extesión (Opcional)" onkeyup= "V_Ext('2236-0900 ext: '+ this.value)"/>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <Input type="text" id="mail" name="mail" placeholder="correo@outlook.com" onkeyup="V_mail(this.value)"/>
-            </div>
-        </div>
-        <!--  
-        <div class="row">
-            <div class="col">
-                <Input type="text" id="LinkedIn" name="LinkedIn" placeholder="Cuenta de LinkedIn"></Input>
+                <Input type="text" id="mail" placeholder="correo@outlook.com" onkeyup="V_mail(this.value)"/>
             </div>
         </div>
 
-        
-        <label for="foto">URL de fotografía (Opcional)</label>
-        <Input type="text" id="foto" name="foto" placeholder="Pega aquí el URL de tu foto"></Inpuut>
-        -->
-        <br>
-        <div class="row">
-            <div class="col">
-                <Input type="text" id="logo" name="logo" placeholder="Pega aquí el URL del logo de tu empresa"></Inpuut>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <Input type="text" id="web" name="web" placeholder="Enlace al hacer clic en el logo"></Inpuut>
-            </div>
-        </div>
-        
     </div>
         <br>
     <div class="botones">
@@ -75,18 +55,18 @@
 </form>
 
   </div>
-  <!-- La siguiente linea es para anexar la firma generada configurada en Firma.php -->
+  <!-- La siguiente linea es para anexar la firma generada configurada en JavaScript -->
   <div class="firma3caja">
-	<table id="f3">
+	<table >
 		<tbody>
 			<tr>
 				<!-- En el siguiente td está el logo -->
-				<td><a href="https://www.hospitalmaria.org/" target="_blank"><img class="logofirma" alt="" src="/logo.png"
-        width="150" height="92"/></a></td>
+				<td><a href="https://www.hospitalmaria.org/" target="_blank"><img class="logofirma" alt="" src="https://dsm01pap002files.storage.live.com/y4m5RzVO6feCCH_paBu1EpfLCmgI0KMA9S5r3N7K1k5mS1M6s3CWszITPgGoFffoG8fJHBQGrX8zsyePO8qEFq02XeyDJE1XgDW1evM5shheUnL5Qt_1EchuuUftCTa35SI8jSeq6whRoskQEGpFOYRF1tyqj2dMrpsr_Mtd5yt4NymajFtw5esMq3E4aQTM5tm?width=600&height=366&cropmode=none"
+                width="180" height="111"/></a></td>
 				<!-- Aquí termina el td del logo -->
 				<!-- Estas td (Columna) conforman el separador vertical de color -->
 				<td style="width: 13px;"></td>
-				<td style="width: 1px; background-color: #f79d00;"></td>
+				<td style="width: 1px; background-color: #f79d00;" ></td>
 				<td style="width: 13px;"></td>
 				<!-- Hasta aquí el separador vertical (Verificar si se puede agregar sombra) -->
 				<!-- Aqui inicia la tablita de el texto -->
@@ -95,44 +75,69 @@
 						<tbody>
 							<tr>
 								<td style=" font-size:16px; color:#000; font-weight:bold;">
-                                <span id="Vista_nombre">Anónimo</span>
+                                <span id="Vista_nombre">Nombre del colaborador</span>
 								</td>
 							</tr>
 							<tr>
 
-								<td style="color:#4c4b4c;font-weight: bold;">
+								<td style="color:#4c4b4c;font-weight: bold;font-size: 11px;">
                                     <span id="Vista_puesto">Puesto de trabajo</span>
 								</td>
 							</tr>
-							<tr>
-
-								<td style="height: 12px;">
-									<!-- espacio entre puesto de trabajo y telefonos -->
+							<tr style="border-bottom: 3px solid black;">
+								<td style="color:#4c4b4c;font-weight: bold;font-size: 11px;">
+                                    <span id="Vista_departamento">Departamento</span>
 								</td>
-							</tr>
+							</tr >
 							<tr>
 								<td style="height: 14px;color:#333333;">
 
 								</td>
 							</tr>
-
 							<tr>
 
 								<td style="color:#333333;">
-<span id="Vista_tel">22360900</span>
+                                    <span id="Vista_cel"></span>
+								</td>
+							</tr>
+							<tr>
+
+								<td style="color:#333333;">
+                                    <span id="Vista_ext"></span>
 								</td>
 							</tr>
 							<tr>
 								<td><a style="color: #333333; text-decoration:none;" href="mailto:$mail">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTEuOTk2IDUxMS45OTYiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTExLjk5NiA1MTEuOTk2IiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im01MDQuMDc0IDExNC4yNDJjLTQuODc4LTIuNjExLTEwLjc5Ni0yLjMyNS0xNS4zOTguNzQ0bC0yMDcuNTc2IDEzOC4zODRjLTYuMzU5IDQuMjQtMTUuNTEgNi42NzItMjUuMTAyIDYuNjcyLTkuNTkxIDAtMTguNzM4LTIuNDMyLTI1LjA5OC02LjY3MWwtMjA3LjU4LTEzOC4zODVjLTQuNjAyLTMuMDY4LTEwLjUyMS0zLjM1NS0xNS4zOTktLjc0NC00Ljg3NiAyLjYxLTcuOTIxIDcuNjkzLTcuOTIxIDEzLjIyNXYyNjUuMWMwIDMwLjQxNiAyNC43NDggNTUuMTYyIDU1LjE2NiA1NS4xNjJoNDAxLjY2N2MzMC40MTcgMCA1NS4xNjMtMjQuNzQ2IDU1LjE2My01NS4xNjJ2LTI2NS4xYzAtNS41MzItMy4wNDUtMTAuNjE1LTcuOTIyLTEzLjIyNXoiIGZpbGw9IiNmZmQ0MDAiLz48cGF0aCBkPSJtNTA0LjA3NCAxMTQuMjQyYy00Ljg3OC0yLjYxMS0xMC43OTYtMi4zMjUtMTUuMzk4Ljc0NGwtMjA3LjU3NiAxMzguMzg0Yy02LjM1OSA0LjI0LTE1LjUxIDYuNjcyLTI1LjEwMiA2LjY3MiAwIDAtLjAwMSAwLS4wMDIgMHYxODcuNjg4aDIwMC44MzdjMzAuNDE3IDAgNTUuMTYzLTI0Ljc0NiA1NS4xNjMtNTUuMTYydi0yNjUuMWMwLTUuNTMzLTMuMDQ1LTEwLjYxNi03LjkyMi0xMy4yMjZ6IiBmaWxsPSIjZmY5ZjA0Ii8+PHBhdGggZD0ibTQ1Ni44MyA2NC4yNjdoLTQwMS42NjRjLTMwLjQxOCAwLTU1LjE2NiAyNC43NDctNTUuMTY2IDU1LjE2NnY4LjAzNGMwIDUuMDE3IDIuNTA3IDkuNjk5IDYuNjggMTIuNDhsMjA3LjU3OSAxMzguMzg1YzExLjMyNiA3LjU1MSAyNi4xNDkgMTEuNzEgNDEuNzM5IDExLjcxczMwLjQxNC00LjE1OCA0MS43NDItMTEuNzFsMjA3LjU3Ni0xMzguMzg1YzQuMTc0LTIuNzgyIDYuNjgtNy40NjQgNi42OC0xMi40OHYtOC4wMzRjMC0zMC40MTktMjQuNzQ4LTU1LjE2Ni01NS4xNjYtNTUuMTY2eiIgZmlsbD0iI2ZmOWYwMCIvPjxwYXRoIGQ9Im00NTYuODMgNjQuMjY3aC0yMDAuODM0djIyNS43NzVoLjAwMmMxNS41OSAwIDMwLjQxNC00LjE1OCA0MS43NDItMTEuNzFsMjA3LjU3Ni0xMzguMzg1YzQuMTc0LTIuNzgyIDYuNjgtNy40NjQgNi42OC0xMi40OHYtOC4wMzRjMC0zMC40MTktMjQuNzQ4LTU1LjE2Ni01NS4xNjYtNTUuMTY2eiIgZmlsbD0iI2ZmNjQxYSIvPjwvc3ZnPg==" style="width: 12px; height: 12px;"/>
+                                    <!-- <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMi4wMDEgNTEyLjAwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLDApIj4KPHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iIiBkPSJNNDc2LjIzMSw0NjUuNDc1SDE3MS44NDljLTE5LjcyMywwLTM1Ljc2OS0xNi4wNDYtMzUuNzY5LTM1Ljc2OXYtNTAuMTMyICBjMC05Ljg2NCw3Ljk5Ny0xNy44NiwxNy44Ni0xNy44NmgyNTQuMjUybDAuMDQ4LTE2MS4yNDhjMC05Ljg2NCw3Ljk5Ny0xNy44NiwxNy44Ni0xNy44Nmg1MC4xMzIgIGMxOS43MjMsMCwzNS43NjksMTYuMDQ2LDM1Ljc2OSwzNS43Njl2MjExLjMzMUM1MTIsNDQ5LjQyOSw0OTUuOTU0LDQ2NS40NzUsNDc2LjIzMSw0NjUuNDc1eiIgZmlsbD0iI2IyODk2NCIgZGF0YS1vcmlnaW5hbD0iI2IyODk2NCIgY2xhc3M9IiI+PC9wYXRoPgo8cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSIiIGQ9Ik00MDguMTkxLDM5Ny40MzVIMTAzLjgwOWMtMTkuNzIzLDAtMzUuNzY5LTE2LjA0Ni0zNS43NjktMzUuNzY5di01MC4xMzIgIGMwLTkuODY0LDcuOTk3LTE3Ljg2LDE3Ljg2LTE3Ljg2aDI1NC4yNTJsMC4wNDYtMTYxLjI0OGMwLTkuODY0LDcuOTk3LTE3Ljg2LDE3Ljg2LTE3Ljg2aDUwLjEzMyAgYzE5LjcyMywwLDM1Ljc2OSwxNi4wNDYsMzUuNzY5LDM1Ljc2OXYyMTEuMzMyQzQ0My45NiwzODEuMzkxLDQyNy45MTUsMzk3LjQzNSw0MDguMTkxLDM5Ny40MzV6IiBmaWxsPSIjZmY5ODAwIiBkYXRhLW9yaWdpbmFsPSIjZmY5ODAwIiBjbGFzcz0iIj48L3BhdGg+CjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9IiIgZD0iTTM0MC4xNTMsMzI5LjM5NUgzNS43NjlDMTYuMDQ2LDMyOS4zOTUsMCwzMTMuMzQ5LDAsMjkzLjYyN1Y4Mi4yOTQgIGMwLTkuNjEsMy43NTctMTguNjMsMTAuNTc5LTI1LjM5M2M2LjkzMy02Ljg3NCwxOC4xMDItNi45MDcsMjUuMDc2LTAuMDczTDE4Ny45NiwyMDYuMDlMMzQwLjI2Niw1Ni44MyAgYzYuOTc0LTYuODM2LDE4LjE0MS02LjgwMSwyNS4wNzYsMC4wNzNjNi44MjIsNi43NjQsMTAuNTc5LDE1Ljc4MiwxMC41NzksMjUuMzkzdjIxMS4zMzEgIEMzNzUuOTIsMzEzLjM0OSwzNTkuODc0LDMyOS4zOTUsMzQwLjE1MywzMjkuMzk1eiIgZmlsbD0iI2ZjZTI3NyIgZGF0YS1vcmlnaW5hbD0iI2ZjZTI3NyIgY2xhc3M9IiI+PC9wYXRoPgo8cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSIiIGQ9Ik0xNzUuNDU5LDI0My44NTRMMTAuNjUzLDgyLjM0MWMtNy4xMTYtNi45NzQtNy4xNDQtMTguNDI4LTAuMDc2LTI1LjQzNyAgYzYuNzQ4LTYuNjkyLDE1LjY5NS0xMC4zNzgsMjUuMTkyLTEwLjM3OGgzMDQuMzg0YzkuNDk3LDAsMTguNDQzLDMuNjg2LDI1LjE5LDEwLjM3OGM3LjA3NSw3LjAxNyw3LjAzMywxOC40NzEtMC4wNzUsMjUuNDM3ICBMMjAwLjQ2MSwyNDMuODU0QzE5My41MTYsMjUwLjY1OSwxODIuNDA0LDI1MC42NjIsMTc1LjQ1OSwyNDMuODU0eiIgZmlsbD0iI2ZkYmYwMCIgZGF0YS1vcmlnaW5hbD0iI2ZkYmYwMCIgY2xhc3M9IiI+PC9wYXRoPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8L2c+PC9zdmc+" style= "width: 18px; height: 18px;" /> -->
                                     <span id="Vista_mail">Correo@Electrónico.com</span>
-									</a>
+                                
+                                </a>
 								</td>
 							</tr>
 						</tbody>
+
 					</table>
 				</td>
 			</tr>
 		</tbody>
+        <tfoot>
+            <tr ><td colspan="16">
+                <br>
+                                               <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMy42NCA1MTMuNjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggZD0iTTQ5OS42NiwzNzYuOTZsLTcxLjY4LTcxLjY4Yy0yNS42LTI1LjYtNjkuMTItMTUuMzU5LTc5LjM2LDE3LjkyYy03LjY4LDIzLjA0MS0zMy4yOCwzNS44NDEtNTYuMzIsMzAuNzIgICAgYy01MS4yLTEyLjgtMTIwLjMyLTc5LjM2LTEzMy4xMi0xMzMuMTJjLTcuNjgtMjMuMDQxLDcuNjgtNDguNjQxLDMwLjcyLTU2LjMyYzMzLjI4LTEwLjI0LDQzLjUyLTUzLjc2LDE3LjkyLTc5LjM2bC03MS42OC03MS42OCAgICBjLTIwLjQ4LTE3LjkyLTUxLjItMTcuOTItNjkuMTIsMGwtNDguNjQsNDguNjRjLTQ4LjY0LDUxLjIsNS4xMiwxODYuODgsMTI1LjQ0LDMwNy4yYzEyMC4zMiwxMjAuMzIsMjU2LDE3Ni42NDEsMzA3LjIsMTI1LjQ0ICAgIGw0OC42NC00OC42NEM1MTcuNTgxLDQyNS42LDUxNy41ODEsMzk0Ljg4LDQ5OS42NiwzNzYuOTZ6IiBmaWxsPSIjZjRiYzNjIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==" style="width: 12px;height: 12px;"/>
+                <span style="font-size: 11px;" >2236-0900</span>
+
+                <br>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMS45OTkgNTExLjk5OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNDM3LjAxOSw3NC45ODFDMzg4LjY2NywyNi42MjgsMzI0LjM4LDAsMjU2LDBDMTg3LjYyLDAsMTIzLjMzMiwyNi42MjgsNzQuOTgxLDc0Ljk4QzI2LjYyOCwxMjMuMzMyLDAsMTg3LjYyLDAsMjU2ICAgIHMyNi42MjgsMTMyLjY2Nyw3NC45ODEsMTgxLjAxOUMxMjMuMzMyLDQ4NS4zNzEsMTg3LjYyLDUxMS45OTksMjU2LDUxMS45OTljNjguMzgxLDAsMTMyLjY2Ny0yNi42MjgsMTgxLjAyLTc0Ljk4MSAgICBjNDguMzUxLTQ4LjM1MSw3NC45OC0xMTIuNjM5LDc0Ljk4LTE4MS4wMTlTNDg1LjM3MSwxMjMuMzMyLDQzNy4wMTksNzQuOTgxeiBNOTYuMjE2LDk2LjIxNiAgICBjMjIuNTExLTIyLjUxMSw0OC45MzgtMzkuNjgxLDc3Ljc0Mi01MC44ODhjLTcuNjcyLDkuNTc4LTE0Ljg1MSwyMC41ODctMjEuNDMsMzIuOTY5Yy03LjY0MSwxNC4zOC0xNC4yMzQsMzAuMTczLTE5LjcyNSw0Ny4wNDIgICAgYy0xOS4wMjItMy4xNTctMzYuNjQ3LTcuMDM5LTUyLjM5My0xMS41OTVDODUuMzQ1LDEwNy42NzgsOTAuNjEsMTAxLjgyMiw5Ni4yMTYsOTYuMjE2eiBNNjIuMjI5LDEzOS41ODUgICAgYzE4LjQxNyw1Ljg5NywzOS40NzksMTAuODcsNjIuNDYxLDE0LjgwOWMtNi40LDI3LjE2Ni0xMC4xNjcsNTYuMzk5LTExLjA2Niw4Ni41OTFIMzAuNTM2ICAgIEMzMi44OTYsMjA0Ljc1Miw0My43NzgsMTcwLjE3Miw2Mi4yMjksMTM5LjU4NXogTTYwLjU5NCwzNjkuNjM4Yy0xNy40NTUtMjkuODk5LTI3Ljc2OS02My40ODEtMzAuMDU5LTk4LjYyM2g4My4xNDYgICAgYzAuOTgyLDI5LjMyOSw0LjY3NCw1Ny43MzEsMTAuODU4LDg0LjE4NkMxMDEuMDg1LDM1OS4wMDMsNzkuNDk0LDM2My44NSw2MC41OTQsMzY5LjYzOHogTTk2LjIxNiw0MTUuNzg0ICAgIGMtNi4zOC02LjM4MS0xMi4zMjItMTMuMDgxLTE3LjgzMS0yMC4wNTVjMTYuMzIzLTQuNTI2LDM0LjU3MS04LjM1OSw1NC4yMTQtMTEuNDMzYzUuNTMsMTcuMTAzLDEyLjE5NCwzMy4xMDUsMTkuOTI4LDQ3LjY2MiAgICBjNy4xNywxMy40OTMsMTUuMDUzLDI1LjM0OSwyMy41MSwzNS41MDVDMTQ2LjQyNyw0NTYuMjgsMTE5LjI2OCw0MzguODM0LDk2LjIxNiw0MTUuNzg0eiBNMjQwLjk4NCw0NzguMTE1ICAgIGMtMjIuODA4LTYuMzg5LTQ0LjM4NC0yNy4yMTctNjEuOTM2LTYwLjI0OWMtNi4xMzktMTEuNTUyLTExLjUzMS0yNC4xNTUtMTYuMTUtMzcuNTg3YzI0LjczLTIuNzIyLDUxLjA0NS00LjMzMSw3OC4wODYtNC43MDkgICAgVjQ3OC4xMTV6IE0yNDAuOTg0LDM0NS41MzdjLTI5Ljk4OCwwLjQwOS01OS4yMTcsMi4yOTItODYuNTksNS41MDdjLTYuMDM4LTI0Ljk2MS05LjY3MS01MS45NzgtMTAuNjY4LTgwLjAyOGg5Ny4yNTlWMzQ1LjUzN3ogICAgIE0yNDAuOTg0LDI0MC45ODRoLTk3LjMxNWMwLjkxMS0yOC44MzQsNC42MDItNTYuNjA1LDEwLjgyOC04Mi4yMDFjMjcuMTk4LDMuNCw1Ni4zNjYsNS40NjgsODYuNDg3LDYuMDZWMjQwLjk4NHogICAgIE0yNDAuOTg0LDEzNC44MDhjLTI3LjE0Ni0wLjU0Ny01My40MDMtMi4zMTctNzcuOTU4LTUuMjA1YzQuNTkxLTEzLjI5Miw5Ljk0MS0yNS43NjgsMTYuMDIyLTM3LjIxNSAgICBjMTcuNTUxLTMzLjAzMiwzOS4xMjgtNTMuODYsNjEuOTM2LTYwLjI0OVYxMzQuODA4eiBNNDUwLjcxNywxNDEuMThjMTcuODc0LDMwLjE5MywyOC40MjcsNjQuMTk5LDMwLjc0OSw5OS44MDRoLTgzLjA4OCAgICBjLTAuODg5LTI5Ljg0NC00LjU4NC01OC43NDktMTAuODUtODUuNjQ3QzQxMC42NjEsMTUxLjYwMSw0MzEuOTg0LDE0Ni44NDgsNDUwLjcxNywxNDEuMTh6IE00MTUuNzgzLDk2LjIxNiAgICBjNi4wMjksNi4wMjksMTEuNjYxLDEyLjM0OSwxNi45MTQsMTguOTFjLTE2LjA3Myw0LjM4OS0zMy45NzIsOC4xMTQtNTMuMjA0LDExLjExMmMtNS41NDgtMTcuMjA4LTEyLjI0My0zMy4zMDUtMjAuMDItNDcuOTQxICAgIGMtNi41NzktMTIuMzgyLTEzLjc1OC0yMy4zOTEtMjEuNDMtMzIuOTY5QzM2Ni44NDUsNTYuNTM1LDM5My4yNzMsNzMuNzA1LDQxNS43ODMsOTYuMjE2eiBNMjcxLjAxNiwyNzEuMDE2aDk3LjI1OSAgICBjLTEuMDA0LDI4LjI2OC00LjY4Niw1NS40OS0xMC44MSw4MC42MTJjLTI3LjE5NC0zLjM4MS01Ni4zNDktNS40My04Ni40NDktNi4wMDZWMjcxLjAxNnogTTI3MS4wMTYsMjQwLjk4NHYtNzYuMDQxICAgIGMzMC4wMDUtMC4zOTQsNTkuMjU3LTIuMjYxLDg2LjY1Ni01LjQ2NGM2LjEyNSwyNS40MDMsOS43NTYsNTIuOTMyLDEwLjY1OSw4MS41MDVIMjcxLjAxNnogTTI3MS4wMTQsMzIuMTM5aDAuMDAxICAgIGMyMi44MDgsNi4zODksNDQuMzg0LDI3LjIxNyw2MS45MzYsNjAuMjQ5YzYuMTc4LDExLjYyNywxMS42MDEsMjQuMzE4LDE2LjI0LDM3Ljg0OGMtMjQuNzYzLDIuNzEyLTUxLjEwOCw0LjMwOS03OC4xNzcsNC42NzQgICAgVjMyLjEzOXogTTI3MS4wMTYsNDc4LjExNVYzNzUuNjU3YzI3LjEyLDAuNTMyLDUzLjM1NywyLjI4Niw3Ny45MDMsNS4xNTZjLTQuNTc5LDEzLjIzMi05LjkxMSwyNS42NTQtMTUuOTY3LDM3LjA1MyAgICBDMzE1LjQsNDUwLjg5OCwyOTMuODI0LDQ3MS43MjYsMjcxLjAxNiw0NzguMTE1eiBNNDE1Ljc4Myw0MTUuNzg0Yy0yMy4wNTEsMjMuMDUxLTUwLjIxLDQwLjQ5Ni03OS44MjEsNTEuNjc4ICAgIGM4LjQ1Ny0xMC4xNTYsMTYuMzQtMjIuMDExLDIzLjUxLTM1LjUwNGM3LjYyLTE0LjM0MSwxNC4xOTgtMzAuMDg4LDE5LjY4LTQ2LjkwNmMxOS40NjUsMy4yMTMsMzcuNDczLDcuMTg2LDUzLjUxNSwxMS44NTkgICAgQzQyNy40MjQsNDAzLjQ1Nyw0MjEuODAxLDQwOS43NjUsNDE1Ljc4Myw0MTUuNzg0eiBNNDUwLjYwNiwzNzEuMDA5Yy0xOC42MzUtNS45OTEtNDAtMTEuMDMyLTYzLjMyNi0xNS4wMSAgICBjNi4yOTYtMjYuNjgsMTAuMDQ4LTU1LjM2LDExLjA0MS04NC45ODNoODMuMTQ2QzQ3OS4xMzksMzA2LjY5NCw0NjguNTQ5LDM0MC43NjksNDUwLjYwNiwzNzEuMDA5eiIgZmlsbD0iI2Y0YmMzYyIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=" style="width: 12px; height: 12px;" />
+                <span style="font-size: 11px;margin-right: 5%;" > <a  href="https://www.hospitalmaria.org/" target="_blank" style="text-decoration:none; color:#000">https://www.hospitalmaria.org/</a></span>
+
+                <br>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPHBhdGggc3R5bGU9IiIgZD0iTTI1OC40OTksNTEyYy01LjE4NiwwLTEwLjAwOC0yLjY4LTEyLjc0NS03LjA5MUwxMDIuODY5LDI3NC42NTJDODUuMjg5LDI0Ni4yNiw3NiwyMTMuNTM0LDc2LDE4MCAgIEM3Niw4MC43NDgsMTU2Ljc0OCwwLDI1NiwwczE4MCw4MC43NDgsMTgwLDE4MGMwLDMyLjUzOS04Ljc3OSw2NC40MjgtMjUuMzg5LDkyLjIyTDI3MS4zNjgsNTA0LjcwNyAgIGMtMi42ODgsNC40ODgtNy41Miw3LjI1MS0xMi43NSw3LjI5MkMyNTguNTc4LDUxMiwyNTguNTM5LDUxMiwyNTguNDk5LDUxMnogTTI1NiwzMGMtODIuNzEsMC0xNTAsNjcuMjktMTUwLDE1MCAgIGMwLDI3Ljk1LDcuNzM0LDU1LjIxNCwyMi4zNjgsNzguODQ2bDEyOS45MDUsMjA5LjM0bDEyNi41OTQtMjExLjM2OEMzOTguNjg5LDIzMy42ODgsNDA2LDIwNy4xMjEsNDA2LDE4MCAgIEM0MDYsOTcuMjksMzM4LjcxLDMwLDI1NiwzMHoiIGZpbGw9IiNmNGJjM2MiIGRhdGEtb3JpZ2luYWw9IiNmZDAwM2EiIGNsYXNzPSIiPjwvcGF0aD4KCTxwYXRoIHN0eWxlPSIiIGQ9Ik0yNTYsMjcwYy0zMS4zOTcsMC02MC4wNDQtMTUuOTc3LTc2LjYzMS00Mi43MzdDMTcwLjYyLDIxMy4xMTcsMTY2LDE5Ni43NzgsMTY2LDE4MCAgIGMwLTQ5LjYyNiw0MC4zNzQtOTAsOTAtOTBzOTAsNDAuMzc0LDkwLDkwYzAsMTYuMjg0LTQuMzcxLDMyLjIwOS0xMi42MzksNDYuMDU1QzMxNi45MTMsMjUzLjU3NCwyODcuOTk0LDI3MCwyNTYsMjcweiBNMjU2LDEyMCAgIGMtMzMuMDg0LDAtNjAsMjYuOTE2LTYwLDYwYzAsMTEuMiwzLjA2OSwyMi4wODIsOC44NzUsMzEuNDdDMjE1Ljk0NSwyMjkuMzMsMjM1LjA2LDI0MCwyNTYsMjQwICAgYzIxLjMzNywwLDQwLjYyOS0xMC45NjUsNTEuNjA3LTI5LjMzMWM1LjQ5LTkuMTkzLDguMzkzLTE5LjgsOC4zOTMtMzAuNjY5QzMxNiwxNDYuOTE2LDI4OS4wODQsMTIwLDI1NiwxMjB6IiBmaWxsPSIjZjRiYzNjIiBkYXRhLW9yaWdpbmFsPSIjZmQwMDNhIiBjbGFzcz0iIj48L3BhdGg+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==" style="width: 12px; height: 12px;" />
+                <span style="font-size: 11px;" >Anillo periférico contiguo a residencial suyapita, Tegucigalpa, MDC.</span>
+
+            </td></tr>
+
+        </tfoot>
 	</table>
 
 </div>

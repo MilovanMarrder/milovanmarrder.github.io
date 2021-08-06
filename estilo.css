@@ -18,9 +18,11 @@
   position: relative;
   box-sizing: border-box;
   padding: 5%;
-  width: 500px;
-  height: 550px;
+  width: 100%;
+  height: auto;
   margin-top: 50px;
+  margin-right: 50px;
+  min-width: 430px;
 }
 
 label{
@@ -37,6 +39,8 @@ label{
   justify-content: space-between;
   padding: 5%;
   padding-top: 0;
+  min-width: 1180px;
+  min-height: 520px;
 
 }
 body {
@@ -49,19 +53,10 @@ input, select {
   border: none;
   border-radius: 5px;
   height: 30px;
-  width: 70%;
+  width: 100%;
   margin: 1%;
 }
-.inputext{
-  background-color: rgba(255, 255, 255, 0.52);
-  border: none;
-  border-radius: 5px;
-  height: 30px;
-  width: 70px;
-}
-select{
-  width: 70px;
-}
+
 .botones{
   border: none;
   border-radius: 5px;
@@ -76,19 +71,20 @@ select{
 /* inicio formato para todas las plantillas de firmas */
 
 .firma1caja, .firma2caja, .firma3caja {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 5%;
+  padding-left: 5%;
   margin-top: 20px;
   margin-right: 5%;
-  padding-right: 5%;
   margin-bottom: 10px;
   box-sizing: border-box;
-  width: 600px;
+  width: 50%;
   border-radius: 15px;
   font-size: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
   float: right;
+  min-width: 645px;
   
   animation: fadeIn 2s;
   -webkit-animation: fadeIn 2s;
