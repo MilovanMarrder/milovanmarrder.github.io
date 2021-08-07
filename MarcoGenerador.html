@@ -33,12 +33,13 @@
                 <Input type="text" id="Vista_tel" placeholder="Área o departamento"onkeyup="V_dept(this.value)"/>
 
                 <!-- Número de celular // campo 3/6 -->
-                <Input type="text" id="cel" placeholder="Teléfono movil (Opcional)"onkeyup= "V_cel('+504 ' + this.value)"/>
+                <Input type="text"  placeholder="Teléfono movil (Opcional)"  onkeyup= "V_cel(this.value)"/>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <Input type="text" id="V_ext" placeholder="Extesión (Opcional)" onkeyup= "V_Ext('2236-0900 ext: '+ this.value)"/>
+                <label for="v_ext">Tel: 2236-0900 ext:</label>
+                <Input style="display: inline;" type="text" id="V_ext" placeholder="Extesión (Opcional)" onkeyup= "V_Ext(this.value)"/>
             </div>
         </div>
         <div class="row">
@@ -50,13 +51,13 @@
     </div>
         <br>
     <div class="botones">
-        <input type="reset" class="BotonDeFormulario" value="Limpiar campos">
+        <input type="reset" class="BotonDeFormulario" value="Limpiar campos" onclick="location.reload()">
     </div>   
 </form>
 
   </div>
   <!-- La siguiente linea es para anexar la firma generada configurada en JavaScript -->
-  <div class="firma3caja">
+  <div class="cajafirma">
 	<table >
 		<tbody>
 			<tr>
@@ -97,12 +98,14 @@
 							<tr>
 
 								<td style="color:#333333;">
-                                    <span id="Vista_cel"></span>
+                                <img id="iconocel" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM1IDM1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxwYXRoIGQ9Ik0yNS4zMDIsMEg5LjY5OGMtMS4zLDAtMi4zNjQsMS4wNjMtMi4zNjQsMi4zNjR2MzAuMjcxQzcuMzM0LDMzLjkzNiw4LjM5OCwzNSw5LjY5OCwzNWgxNS42MDQgICBjMS4zLDAsMi4zNjQtMS4wNjIsMi4zNjQtMi4zNjRWMi4zNjRDMjcuNjY2LDEuMDYzLDI2LjYwMiwwLDI1LjMwMiwweiBNMTUuMDA0LDEuNzA0aDQuOTkyYzAuMTU4LDAsMC4yODYsMC4xMjgsMC4yODYsMC4yODcgICBjMCwwLjE1OC0wLjEyOCwwLjI4Ni0wLjI4NiwwLjI4NmgtNC45OTJjLTAuMTU4LDAtMC4yODYtMC4xMjgtMC4yODYtMC4yODZDMTQuNzE4LDEuODMyLDE0Ljg0NiwxLjcwNCwxNS4wMDQsMS43MDR6IE0xNy41LDMzLjgxOCAgIGMtMC42NTMsMC0xLjE4Mi0wLjUyOS0xLjE4Mi0xLjE4M3MwLjUyOS0xLjE4MiwxLjE4Mi0xLjE4MnMxLjE4MiwwLjUyOCwxLjE4MiwxLjE4MlMxOC4xNTMsMzMuODE4LDE3LjUsMzMuODE4eiBNMjYuMDIxLDMwLjYyNSAgIEg4Ljk3OVYzLjc0OWgxNy4wNDJWMzAuNjI1eiIgZmlsbD0iI2Y3OWQwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=" style="width:12px;height:12px;display: none;"/>                                    
+                                <span id="Vista_cel"></span>
 								</td>
 							</tr>
 							<tr>
 
 								<td style="color:#333333;">
+                                    <img id="iconotel" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxLjQxMyA1MS40MTMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggc3R5bGU9IiIgZD0iTTI1Ljk4OSwxMi4yNzRjOC42NjMsMC4wODUsMTQuMDktMC40NTQsMTQuODIzLDkuMTQ4aDEwLjU2NGMwLTE0Ljg3NS0xMi45NzMtMTYuODgtMjUuNjYyLTE2Ljg4ICAgIGMtMTIuNjksMC0yNS42NjIsMi4wMDUtMjUuNjYyLDE2Ljg4aDEwLjQ4MkMxMS4zNDUsMTEuNjM3LDE3LjM5OCwxMi4xOSwyNS45ODksMTIuMjc0eiIgZmlsbD0iI2Y3OWQwMCIgZGF0YS1vcmlnaW5hbD0iIzAxMDAwMiIgY2xhc3M9IiI+PC9wYXRoPgoJCTxwYXRoIHN0eWxlPSIiIGQ9Ik01LjI5MSwyNi4yMDRjMi41NzMsMCw0LjcxNCwwLjE1NCw1LjE5LTIuMzc3YzAuMDY0LTAuMzQ0LDAuMTAxLTAuNzM0LDAuMTAxLTEuMTg1SDEwLjQ2SDAgICAgQzAsMjYuNDA3LDIuMzY5LDI2LjIwNCw1LjI5MSwyNi4yMDR6IiBmaWxsPSIjZjc5ZDAwIiBkYXRhLW9yaWdpbmFsPSIjMDEwMDAyIiBjbGFzcz0iIj48L3BhdGg+CgkJPHBhdGggc3R5bGU9IiIgZD0iTTQwLjg4LDIyLjY0MmgtMC4wOTljMCwwLjQ1NCwwLjAzOSwwLjg0NSwwLjExMiwxLjE4NWMwLjUwMiwyLjMzNCwyLjY0LDIuMTg5LDUuMjA0LDIuMTg5ICAgIGMyLjkzNiwwLDUuMzE2LDAuMTkzLDUuMzE2LTMuMzc0SDQwLjg4eiIgZmlsbD0iI2Y3OWQwMCIgZGF0YS1vcmlnaW5hbD0iIzAxMDAwMiIgY2xhc3M9IiI+PC9wYXRoPgoJCTxwYXRoIHN0eWxlPSIiIGQ9Ik0zNS43MTksMjAuMDc4di0xLjQ5NmMwLTAuNjY5LTAuNzcxLTAuNzExLTEuNzIzLTAuNzExaC0xLjU1NWMtMC45NTEsMC0xLjcyMiwwLjA0Mi0xLjcyMiwwLjcxMSAgICB2MS4yODl2MWgtMTF2LTF2LTEuMjg5YzAtMC42NjktMC43NzEtMC43MTEtMS43MjItMC43MTFoLTEuNTU2Yy0wLjk1MSwwLTEuNzIyLDAuMDQyLTEuNzIyLDAuNzExdjEuNDk2djEuMzA2ICAgIEMxMi4yMTMsMjMuOTg4LDQuMDEzLDM1LjA3MywzLjcxNSwzNi40MTVsMC4wMDQsOC45NTVjMCwwLjgyNywwLjY3MywxLjUsMS41LDEuNWg0MGMwLjgyNywwLDEuNS0wLjY3MywxLjUtMS41di05ICAgIGMtMC4yOTUtMS4zMDMtOC40OTMtMTIuMzgzLTExLTE0Ljk4N1YyMC4wNzh6IE0xOS4xNzcsMzcuNjJjLTAuODA1LDAtMS40NTgtMC42NTItMS40NTgtMS40NThzMC42NTMtMS40NTgsMS40NTgtMS40NTggICAgczEuNDU4LDAuNjUyLDEuNDU4LDEuNDU4UzE5Ljk4MiwzNy42MiwxOS4xNzcsMzcuNjJ6IE0xOS4xNzcsMzIuNjJjLTAuODA1LDAtMS40NTgtMC42NTItMS40NTgtMS40NThzMC42NTMtMS40NTgsMS40NTgtMS40NTggICAgczEuNDU4LDAuNjUyLDEuNDU4LDEuNDU4UzE5Ljk4MiwzMi42MiwxOS4xNzcsMzIuNjJ6IE0xOS4xNzcsMjcuNjIxYy0wLjgwNSwwLTEuNDU4LTAuNjUyLTEuNDU4LTEuNDU4ICAgIGMwLTAuODA1LDAuNjUzLTEuNDU4LDEuNDU4LTEuNDU4czEuNDU4LDAuNjUzLDEuNDU4LDEuNDU4QzIwLjYzNSwyNi45NjksMTkuOTgyLDI3LjYyMSwxOS4xNzcsMjcuNjIxeiBNMjUuMTc3LDM3LjYyICAgIGMtMC44MDUsMC0xLjQ1OC0wLjY1Mi0xLjQ1OC0xLjQ1OHMwLjY1My0xLjQ1OCwxLjQ1OC0xLjQ1OGMwLjgwNiwwLDEuNDU4LDAuNjUyLDEuNDU4LDEuNDU4UzI1Ljk4MywzNy42MiwyNS4xNzcsMzcuNjJ6ICAgICBNMjUuMTc3LDMyLjYyYy0wLjgwNSwwLTEuNDU4LTAuNjUyLTEuNDU4LTEuNDU4czAuNjUzLTEuNDU4LDEuNDU4LTEuNDU4YzAuODA2LDAsMS40NTgsMC42NTIsMS40NTgsMS40NTggICAgUzI1Ljk4MywzMi42MiwyNS4xNzcsMzIuNjJ6IE0yNS4xNzcsMjcuNjIxYy0wLjgwNSwwLTEuNDU4LTAuNjUyLTEuNDU4LTEuNDU4YzAtMC44MDUsMC42NTMtMS40NTgsMS40NTgtMS40NTggICAgYzAuODA2LDAsMS40NTgsMC42NTMsMS40NTgsMS40NThDMjYuNjM1LDI2Ljk2OSwyNS45ODMsMjcuNjIxLDI1LjE3NywyNy42MjF6IE0zMS4xNzcsMzcuNjJjLTAuODA2LDAtMS40NTgtMC42NTItMS40NTgtMS40NTggICAgczAuNjUyLTEuNDU4LDEuNDU4LTEuNDU4czEuNDU4LDAuNjUyLDEuNDU4LDEuNDU4UzMxLjk4MywzNy42MiwzMS4xNzcsMzcuNjJ6IE0zMS4xNzcsMzIuNjJjLTAuODA2LDAtMS40NTgtMC42NTItMS40NTgtMS40NTggICAgczAuNjUyLTEuNDU4LDEuNDU4LTEuNDU4czEuNDU4LDAuNjUyLDEuNDU4LDEuNDU4UzMxLjk4MywzMi42MiwzMS4xNzcsMzIuNjJ6IE0zMS4xNzcsMjcuNjIxYy0wLjgwNiwwLTEuNDU4LTAuNjUyLTEuNDU4LTEuNDU4ICAgIGMwLTAuODA1LDAuNjUyLTEuNDU4LDEuNDU4LTEuNDU4czEuNDU4LDAuNjUzLDEuNDU4LDEuNDU4QzMyLjYzNSwyNi45NjksMzEuOTgzLDI3LjYyMSwzMS4xNzcsMjcuNjIxeiIgZmlsbD0iI2Y3OWQwMCIgZGF0YS1vcmlnaW5hbD0iIzAxMDAwMiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=" style="width: 12px; height: 12px;display: none;"/>
                                     <span id="Vista_ext"></span>
 								</td>
 							</tr>

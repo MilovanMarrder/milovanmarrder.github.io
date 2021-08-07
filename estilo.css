@@ -24,10 +24,13 @@
   margin-right: 50px;
   min-width: 430px;
 }
+#V_ext{
+  width:20% ;
+}
 
-label{
-  display: inline-block;
-  position: relative;
+label {
+  font-size: 16px;
+  margin: 1%;
 }
   
 .bodygenerador {
@@ -70,7 +73,7 @@ input, select {
 }
 /* inicio formato para todas las plantillas de firmas */
 
-.firma1caja, .firma2caja, .firma3caja {
+.cajafirma {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 5%;
   padding-left: 5%;
@@ -131,85 +134,8 @@ input, select {
 
   } 
 
-.celdaarea {
-  color:var(--naranja);
-  font-weight: bold;
-
-}
-
 /* final plantilla 1 de firma */
 
-/* Inicio plantilla 2 de firma */
-.firma2caja {
-  
-  animation: fadeIn 4s;
-  -webkit-animation: fadeIn 4s;
-  -moz-animation: fadeIn 4s;
-  -o-animation: fadeIn 4s;
-  -ms-animation: fadeIn 4s;
-}
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-/* final plantilla 2 de firma */
-
-/* Inicio plantilla 3 de firma */
-.firma3caja {
-  
-  animation: fadeIn 6s;
-  -webkit-animation: fadeIn 6s;
-  -moz-animation: fadeIn 6s;
-  -o-animation: fadeIn 6s;
-  -ms-animation: fadeIn 6s;
-}
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-/* final plantilla 3 de firma */
 nav {
   position: fixed;
   top: 20px;
