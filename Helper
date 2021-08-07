@@ -1,15 +1,87 @@
-Clases definidas:
-
+--------------------------------------------------------------
+::::::::::::::Clases utilizadas en el código::::::::::::::::::
+--------------------------------------------------------------
 bodyGenerador : Se define el body de la pantalla del genrerador de la firma para no
 mezclar los estilos con el del index.html
 
-Firma1texto : Se define las celdas de la plantilla de firma 1 para estilos
-Firma1caja : Se define el contenedor de la plantilla de firma 1 para estilos
+estilo.css:
+  35    
+  36: .bodygenerador {
+  37    background: linear-gradient(to right, var(--verde), var(--naranja));
 
+Helper:
+  2  
+  3: bodyGenerador : Se define el body de la pantalla del genrerador de la firma para no
+  4  mezclar los estilos con el del index.html
 
-url del logo del hospital maria
-https://dsm01pap002files.storage.live.com/y4m5RzVO6feCCH_paBu1EpfLCmgI0KMA9S5r3N7K1k5mS1M6s3CWszITPgGoFffoG8fJHBQGrX8zsyePO8qEFq02XeyDJE1XgDW1evM5shheUnL5Qt_1EchuuUftCTa35SI8jSeq6whRoskQEGpFOYRF1tyqj2dMrpsr_Mtd5yt4NymajFtw5esMq3E4aQTM5tm?width=600&height=366&cropmode=none
+MarcoGenerador.html:
+  12  
+  13: <body class="bodygenerador">
+  14    <!-- En el siguiente div clase formulario tengo contenido el formulario // También necesario para posicionamiento en pagina -->
 
+---------------------------------------------------------------------------
 
-id definidas
+---cajafirma----> Se define el contenedor de la plantilla de firma para estilos
+estilo.css:
+  75  
+  76: .cajafirma {
+  77    background-color: rgba(255, 255, 255, 0.8);
+
+Helper:
+  22  
+  23: ---cajafirma----> Se define el contenedor de la plantilla de firma para estilos
+  24  
+
+MarcoGenerador.html:
+  59    <!-- La siguiente linea es para anexar la firma generada configurada en JavaScript -->
+  60:   <div class="cajafirma">
+  61  	<table >
+-----------------------------------------------------------------------------------------
+----formulario-----> Formulario en html 
+
+estilo.css:
+  13: .formulario {
+  14    background-color: rgba(255, 255, 255, 0.3);
+
+MarcoGenerador.html:
+  13  <body class="bodygenerador">
+  14:   <!-- En el siguiente div clase formulario tengo contenido el formulario // También necesario para posicionamiento en pagina -->
+  15    <div>
+  16:   <form class="formulario">
+  17      <h2 style="color:rgb(35, 35, 35); text-align: center;">GENERANDO TU FIRMA INSTITUCIONAL</h2>
+
+-----------------------------------------------------------------------------------------
+------botones----> boton para limpiar celdas del formulario
+estilo.css:
+  62  
+  63: .botones{
+  64    border: none;
+
+MarcoGenerador.html:
+  52          <br>
+  53:     <div class="botones">
+  54          <input type="reset" class="BotonDeFormulario" value="Limpiar campos" onclick="location.reload()">
+
+-----------------------------------------------------------------------------------------
+-----BotonDeFormulario:hover----> estilo al poner el puntero sobre él
+estilo.css:
+  70  }
+  71: .BotonDeFormulario:hover{
+  72    background: #dddddd;
+-----------------------------------------------------------------------------------------
+----Firma1texto---> texto en la tabla de la firma
+
+estilo.css:
+  127  /* inicio plantilla 1 de firma */
+  128: .firma1texto{
+  129            border:0; 
+
+MarcoGenerador.html:
+  74  				<td>
+  75: 					<table class="firma1texto">
+  76  						<tbody>
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+
 
