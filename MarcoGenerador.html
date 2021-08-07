@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de firma</title>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body class="bodygenerador">
+  <!-- En el siguiente div clase formulario tengo contenido el formulario // También necesario para posicionamiento en pagina -->
+  <div>
+  <form class="formulario">
+    <h2 style="color:rgba(22, 17, 38, 0.9); text-align: center;">DATOS PARA TU FIRMA</h2>
+    <div>
+        <div class="row">
+            <div class="col">
+                <!-- nombre del empleado // campo 1/6 -->
+                <Input type="text" id="nombre" placeholder="Ingresa el nombre a mostrar" onkeyup="V_nombre(this.value)" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- Puesto del empleado // campo 2/6 -->
+                <Input type="text" id="puesto" placeholder="Puesto de trabajo" onkeyup="V_Puesto(this.value)"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <Input type="text" id="Vista_tel" placeholder="Área o departamento"onkeyup="V_dept(this.value)"/>
+
+                <!-- Número de celular // campo 3/6 -->
+                <Input type="text"  placeholder="Teléfono movil (Opcional)"  onkeyup= "V_cel(this.value)"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="v_ext">Tel: 2236-0900 ext:</label>
+                <Input style="display: inline;" type="text" id="V_ext" placeholder="Extesión" onkeyup= "V_Ext(this.value)"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <Input type="text" id="mail" placeholder="correo@outlook.com" onkeyup="V_mail(this.value)"/>
+            </div>
+        </div>
+
+    </div>
+        <br>
+    <div class="botones">
+        <button type="reset" onclick="location.reload()" style="background-color: rgb(255, 255, 255,0.3);color: #000;">Limpiar campos</button>
+    </div>   
+</form>
+
+  </div>
+  <!-- La siguiente linea es para anexar la firma generada configurada en JavaScript -->
+  <div class="cajafirma"  id="tablafirma">
+	<table >
+		<tbody>
+			<tr>
+				<!-- En el siguiente td está el logo -->
+				<td><a href="https://www.hospitalmaria.org/" target="_blank"><img class="logofirma" alt="" src="https://dsm01pap002files.storage.live.com/y4m5RzVO6feCCH_paBu1EpfLCmgI0KMA9S5r3N7K1k5mS1M6s3CWszITPgGoFffoG8fJHBQGrX8zsyePO8qEFq02XeyDJE1XgDW1evM5shheUnL5Qt_1EchuuUftCTa35SI8jSeq6whRoskQEGpFOYRF1tyqj2dMrpsr_Mtd5yt4NymajFtw5esMq3E4aQTM5tm?width=600&height=366&cropmode=none"
+                width="180" height="111"/></a></td>
+				<!-- Aquí termina el td del logo -->
+				<!-- Estas td (Columna) conforman el separador vertical de color -->
+				<td style="width: 13px;"></td>
+				<td style="width: 1px; background-color: #f79d00;" ></td>
+				<td style="width: 13px;"></td>
+				<!-- Hasta aquí el separador vertical (Verificar si se puede agregar sombra) -->
+				<!-- Aqui inicia la tablita de el texto -->
+				<td>
+					<table class="firma1texto">
+						<tbody>
+							<tr>
+								<td style=" font-size:16px; color:#000; font-weight:bold;">
+                                <span id="Vista_nombre">Nombre del colaborador</span>
+								</td>
+							</tr>
+							<tr>
+
+								<td style="color:#4c4b4c;font-weight: bold;font-size: 11px;">
+                                    <span id="Vista_puesto">Puesto de trabajo</span>
+								</td>
+							</tr>
+							<tr style="border-bottom: 3px solid black;">
+								<td style="color:#4c4b4c;font-weight: bold;font-size: 11px;">
+                                    <span id="Vista_departamento">Departamento</span>
+								</td>
+							</tr >
+							<tr>
+								<td style="height: 14px;color:#333333;">
+
+								</td>
+							</tr>
+							<tr>
+
+								<td style="color:#333333;">
+                                    <img id="iconocel" src="https://dsm01pap002files.storage.live.com/y4mbqQpLGYPGSDQACFTUW6sOmE5Bgw3gcKXUBbRQAGHuAIaS_j59itqlAzsYsKeBtw-kOwgE9ylmp6g1oEe2oXd1hX-kLdRWGZlN07CV-MU-iFIPeWyujG9gYsXrcJ-fFJh22atVaXCtTXks_FkNg1dEHxojLOvbwWV0X0OQJE0H6BkOFiUd3JiD03l3WTfK5Fc?width=512&height=512&cropmode=none" style="width:12px;height:12px;display:none;" />
+                                    <span id="Vista_cel"></span>
+								</td>
+							</tr>
+							<tr>
+
+								<td style="color:#333333;">
+                                    <img id="iconotel" src="https://dsm01pap002files.storage.live.com/y4mCDz2OSdBfjasa5uMewdsbAwJh7okjExiqoZ1Nh5CLrrZJO9bVhnVHfZoUjxKDvS20luewDDhBVUwk5wnmgIOtRiClzK4y2tv-5u_XNyaOMwx4PAckYXKv7tIcRMs9KvJNkzZhhEaI45_-bAihCUl2SSKg1b_IQghWLKfGUU5xOw3MMSqwsVKdLz-fWpJCemJ?width=512&height=512&cropmode=none" style="width:12px;height:12px;display:none;" />
+                                    <span id="Vista_ext"></span>
+								</td>
+							</tr>
+							<tr>
+								<td><a style="color: #333333; text-decoration:none;" href="mailto:$mail">
+                                    <img src="https://dsm01pap002files.storage.live.com/y4muxp_jOGMeEVkRWOFqscraOl_7mbkLwt5xoPTEX65DRk_VG8hXvJEleF-x5uZyrZKbdO9qUk-e9MVLxZjAU62wnWInRLqzXQ2z9uesZd2wvtM5YgLqNCO38d8HJyBmWyEOmLzbJkOGGkLSdKVDRHZDHt2yApsVjqQi6AxH_PlG2DThuxSO2XYR7Mql5H_lb9s?width=512&height=512&cropmode=none" width="12px" height="12px" />
+                                    <!-- <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMi4wMDEgNTEyLjAwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLDApIj4KPHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iIiBkPSJNNDc2LjIzMSw0NjUuNDc1SDE3MS44NDljLTE5LjcyMywwLTM1Ljc2OS0xNi4wNDYtMzUuNzY5LTM1Ljc2OXYtNTAuMTMyICBjMC05Ljg2NCw3Ljk5Ny0xNy44NiwxNy44Ni0xNy44NmgyNTQuMjUybDAuMDQ4LTE2MS4yNDhjMC05Ljg2NCw3Ljk5Ny0xNy44NiwxNy44Ni0xNy44Nmg1MC4xMzIgIGMxOS43MjMsMCwzNS43NjksMTYuMDQ2LDM1Ljc2OSwzNS43Njl2MjExLjMzMUM1MTIsNDQ5LjQyOSw0OTUuOTU0LDQ2NS40NzUsNDc2LjIzMSw0NjUuNDc1eiIgZmlsbD0iI2IyODk2NCIgZGF0YS1vcmlnaW5hbD0iI2IyODk2NCIgY2xhc3M9IiI+PC9wYXRoPgo8cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSIiIGQ9Ik00MDguMTkxLDM5Ny40MzVIMTAzLjgwOWMtMTkuNzIzLDAtMzUuNzY5LTE2LjA0Ni0zNS43NjktMzUuNzY5di01MC4xMzIgIGMwLTkuODY0LDcuOTk3LTE3Ljg2LDE3Ljg2LTE3Ljg2aDI1NC4yNTJsMC4wNDYtMTYxLjI0OGMwLTkuODY0LDcuOTk3LTE3Ljg2LDE3Ljg2LTE3Ljg2aDUwLjEzMyAgYzE5LjcyMywwLDM1Ljc2OSwxNi4wNDYsMzUuNzY5LDM1Ljc2OXYyMTEuMzMyQzQ0My45NiwzODEuMzkxLDQyNy45MTUsMzk3LjQzNSw0MDguMTkxLDM5Ny40MzV6IiBmaWxsPSIjZmY5ODAwIiBkYXRhLW9yaWdpbmFsPSIjZmY5ODAwIiBjbGFzcz0iIj48L3BhdGg+CjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9IiIgZD0iTTM0MC4xNTMsMzI5LjM5NUgzNS43NjlDMTYuMDQ2LDMyOS4zOTUsMCwzMTMuMzQ5LDAsMjkzLjYyN1Y4Mi4yOTQgIGMwLTkuNjEsMy43NTctMTguNjMsMTAuNTc5LTI1LjM5M2M2LjkzMy02Ljg3NCwxOC4xMDItNi45MDcsMjUuMDc2LTAuMDczTDE4Ny45NiwyMDYuMDlMMzQwLjI2Niw1Ni44MyAgYzYuOTc0LTYuODM2LDE4LjE0MS02LjgwMSwyNS4wNzYsMC4wNzNjNi44MjIsNi43NjQsMTAuNTc5LDE1Ljc4MiwxMC41NzksMjUuMzkzdjIxMS4zMzEgIEMzNzUuOTIsMzEzLjM0OSwzNTkuODc0LDMyOS4zOTUsMzQwLjE1MywzMjkuMzk1eiIgZmlsbD0iI2ZjZTI3NyIgZGF0YS1vcmlnaW5hbD0iI2ZjZTI3NyIgY2xhc3M9IiI+PC9wYXRoPgo8cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSIiIGQ9Ik0xNzUuNDU5LDI0My44NTRMMTAuNjUzLDgyLjM0MWMtNy4xMTYtNi45NzQtNy4xNDQtMTguNDI4LTAuMDc2LTI1LjQzNyAgYzYuNzQ4LTYuNjkyLDE1LjY5NS0xMC4zNzgsMjUuMTkyLTEwLjM3OGgzMDQuMzg0YzkuNDk3LDAsMTguNDQzLDMuNjg2LDI1LjE5LDEwLjM3OGM3LjA3NSw3LjAxNyw3LjAzMywxOC40NzEtMC4wNzUsMjUuNDM3ICBMMjAwLjQ2MSwyNDMuODU0QzE5My41MTYsMjUwLjY1OSwxODIuNDA0LDI1MC42NjIsMTc1LjQ1OSwyNDMuODU0eiIgZmlsbD0iI2ZkYmYwMCIgZGF0YS1vcmlnaW5hbD0iI2ZkYmYwMCIgY2xhc3M9IiI+PC9wYXRoPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8L2c+PC9zdmc+" style= "width: 18px; height: 18px;" /> -->
+                                    <span id="Vista_mail">Correo@Electrónico.com</span>
+                                
+                                </a>
+								</td>
+							</tr>
+						</tbody>
+
+					</table>
+				</td>
+			</tr>
+		</tbody>
+        <tfoot>
+            <tr ><td colspan="16">
+                <br>
+                <img src="https://dsm01pap002files.storage.live.com/y4mCDz2OSdBfjasa5uMewdsbAwJh7okjExiqoZ1Nh5CLrrZJO9bVhnVHfZoUjxKDvS20luewDDhBVUwk5wnmgIOtRiClzK4y2tv-5u_XNyaOMwx4PAckYXKv7tIcRMs9KvJNkzZhhEaI45_-bAihCUl2SSKg1b_IQghWLKfGUU5xOw3MMSqwsVKdLz-fWpJCemJ?width=512&height=512&cropmode=none" style="width:12px;height:12px;" />
+                <span style="font-size: 11px;" >2236-0900</span>
+
+                <br>
+                <img src="https://dsm01pap002files.storage.live.com/y4moSHF-8hJ8wiQUmlOV0P1Re_vWWy8Ev2JMQ2vNJk6UTi3G8JL49IXIyyGxnIsOOUrIMJsxYCR6fZcDOApfS82uYm6XS2qmsWE138pqyzvoeIG8nwPHfeFWzQXqvyxcNSbHC341vY4-Cco23eEql7BucOF6peITDLBVNfIUV2bds7bjof0yNdL4IPVwxo2Aa2U?width=512&height=512&cropmode=none" style="width:12px;height:12px;" />
+                <span style="font-size: 11px;margin-right: 5%;" > <a  href="https://www.hospitalmaria.org/" target="_blank" style="text-decoration:none; color:#000">https://www.hospitalmaria.org/</a></span>
+
+                <br>
+                <img src="https://dsm01pap002files.storage.live.com/y4mS0ALrwgWzE4zwPkHANYfq8flyM2g7m6fUZS-efJftAQdZPbjc9FFjtbpF2APnJ2TgFp8olfBvlQQrc177dzPwDi559FjaFGlyWM5acTN8FUSSb7ptam7JS7a_dSkMuDnPOxDiBrqrNl35CCu07MGR0jwY8d65ePVJpyw5bdnFTqcHVdyuSAUarSBZvTEzMIZ?width=512&height=512&cropmode=none" style="width:12px;height:12px;" />
+                <span style="font-size: 11px;" >Anillo periférico contiguo a residencial suyapita, Tegucigalpa, MDC.</span>
+
+            </td></tr>
+
+        </tfoot>
+	</table>
+    <br>
+    <button onclick="ejecutar('tablafirma')">Copiar firma</button>
+
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
+

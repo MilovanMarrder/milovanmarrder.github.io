@@ -1,15 +1,47 @@
-let boton = document.getElementById("icono");
-let enlaces = document.getElementById("enlaces");
-let contador = 0;
+function V_nombre(texto) {
+  document.querySelector("#Vista_nombre").innerHTML = texto;
+}
+function V_Puesto(texto) {
+  document.querySelector("#Vista_puesto").innerHTML = texto;
+}
 
-boton.addEventListener("click", function(e){
-    e.preventDefault();
-    if(contador==0){
-        enlaces.className = ("enlaces dos")
-        contador=1;
-    }else{
-        enlaces.classList.remove("dos")
-        enlaces.className = ("enlaces uno")
-        contador=0;
-    }
-})
+//La siguiente funcion la definí para que cargué el texto y el icono por ser opcional-
+function V_cel(texto) {
+  if (texto != "") {
+    document.querySelector("#Vista_cel").innerHTML = "+504 " + texto;
+    var x = document.querySelector("#iconocel");
+    x.style.display = "inline";
+  } else {
+    document.querySelector("#Vista_cel").innerHTML = texto;
+    var x = document.querySelector("#iconocel");
+    x.style.display = "none";
+  }
+}
+
+function V_Ext(texto) {
+  if (texto != "") {
+    document.querySelector("#Vista_ext").innerHTML = "2236-0900 ext: " + texto;
+    var x = document.querySelector("#iconotel");
+    x.style.display = "inline";
+  } else {
+    document.querySelector("#Vista_ext").innerHTML = texto;
+    var x = document.querySelector("#iconotel");
+    x.style.display = "none";
+  }
+}
+function V_dept(texto) {
+  document.querySelector("#Vista_departamento").innerHTML = texto;
+}
+function V_mail(texto) {
+  document.querySelector("#Vista_mail").innerHTML = texto;
+}
+function ejecutar(idelemento){
+  var aux = document.createElement("div");
+  aux.setAttribute("contentEditable", true);
+  aux.innerHTML = document.getElementById(idelemento).innerHTML;
+  aux.setAttribute("onfocus", "document.execCommand('selectAll',false,null)"); 
+  document.body.appendChild(aux);
+  aux.focus();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+}
