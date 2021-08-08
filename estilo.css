@@ -57,6 +57,9 @@ label {
   min-height: 800px;
 
 }
+html{
+  min-width: 1180px;
+}
 body {
   background: linear-gradient(to right, var(--verde), var(--naranja));
 
