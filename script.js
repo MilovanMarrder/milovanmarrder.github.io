@@ -44,4 +44,5 @@ function ejecutar(idelemento){
   aux.focus();
   document.execCommand("copy");
   document.body.removeChild(aux);
+  document.getElementById('Copiar').innerText="¡Copiado!";
 }
