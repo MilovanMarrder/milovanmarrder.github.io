@@ -51,7 +51,7 @@ function V_mail(texto) {
 function ejecutar(idelemento){
   var aux = document.createElement("div");
   var tabla = document.getElementById(idelemento).cloneNode(true);
-  tabla.style.backgroundColor = "#ffffff"; // agregar un fondo blanco a la tabla
+  tabla.style.backgroundColor = "#fff"; // agregar un fondo blanco a la tabla
   aux.appendChild(tabla); // envolver la tabla en un div contenedor
   aux.setAttribute("contentEditable", true);
   aux.setAttribute("onfocus", "document.execCommand('selectAll',false,null)"); 
