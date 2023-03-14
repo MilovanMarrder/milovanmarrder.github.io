@@ -23,11 +23,11 @@ function V_Ext(texto) {
     document.querySelector("#Vista_ext").innerHTML = "2236-0900 ext: " + texto;
     var x = document.querySelector("#iconotel");
     x.style.display = "inline";
-  } else {
+  } /*else {
     document.querySelector("#Vista_ext").innerHTML = texto;
     var x = document.querySelector("#iconotel");
     x.style.display = "none";
-  }
+  }*/
 }
 function V_dept(texto) {
   document.querySelector("#Vista_departamento").innerHTML = texto;
