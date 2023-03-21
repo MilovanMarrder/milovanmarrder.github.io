@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-   <head>
+  <head>
     <link rel="stylesheet" href="estilo.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,7 +8,6 @@
     <title>Generador de firma</title>
     <script type="text/javascript" src="script.js"></script>
   </head>
- 
 
   <body class="bodygenerador">
     <!-- En el siguiente div clase formulario tengo contenido el formulario // También necesario para posicionamiento en pagina -->
@@ -57,21 +56,18 @@
               />-->
             </div>
           </div>
-          <div class="row"> 
-             
-             <div class="row">
-            <div class="col">
-              <input
-                type="text"
-                id="mail"
-                placeholder="correo@hospitalmaria.com"
-                onkeyup="V_mail(this.value)"
-             
-              />
-  
+          <div class="row">
+            <div class="row">
+              <div class="col">
+                <input
+                  type="text"
+                  id="mail"
+                  placeholder="correo@hospitalmaria.com"
+                  onkeyup="V_mail(this.value)"
+                />
+              </div>
             </div>
-          </div>           
-             <div class="col">
+            <div class="col">
               <label for="v_ext"></label>
               <input
                 type="text"
@@ -79,7 +75,6 @@
                 placeholder="Extensión"
                 onkeyup="V_Ext(this.value)"
               />
-         
             </div>
           </div>
         </div>
@@ -97,23 +92,59 @@
     </div>
     <!-- La siguiente linea es para anexar la firma generada configurada en JavaScript -->
     <div class="cajafirma">
-      <div id="tablafirma" style="background-color: rgb(255, 255, 255); border-collapse: collapse; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
-        <table >
+      <div
+        id="tablafirma"
+        style="
+          background-color: rgb(255, 255, 255);
+          border-collapse: collapse;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        "
+      >
+        <table>
           <tbody>
             <tr>
               <!-- En el siguiente td está el logo -->
               <td>
-                <a href="https://www.hospitalmaria.org/" target="_blank"
-                  >
-                  <img class="logofirma" alt="" src="https://dsm01pap002files.storage.live.com/y4m5RzVO6feCCH_paBu1EpfLCmgI0KMA9S5r3N7K1k5mS1M6s3CWszITPgGoFffoG8fJHBQGrX8zsyePO8qEFq02XeyDJE1XgDW1evM5shheUnL5Qt_1EchuuUftCTa35SI8jSeq6whRoskQEGpFOYRF1tyqj2dMrpsr_Mtd5yt4NymajFtw5esMq3E4aQTM5tm?width=600&amp;height=366&amp;cropmode=none" 
-                       style="width: 80%; height: 80%; max-width: 2000px; max-height: 1360px; min-width: 200px; min-height: 140px">
+                <a href="https://www.hospitalmaria.org/" target="_blank">
+                  <img
+                    class="logofirma"
+                    alt=""
+                    src="https://dsm01pap002files.storage.live.com/y4m5RzVO6feCCH_paBu1EpfLCmgI0KMA9S5r3N7K1k5mS1M6s3CWszITPgGoFffoG8fJHBQGrX8zsyePO8qEFq02XeyDJE1XgDW1evM5shheUnL5Qt_1EchuuUftCTa35SI8jSeq6whRoskQEGpFOYRF1tyqj2dMrpsr_Mtd5yt4NymajFtw5esMq3E4aQTM5tm?width=600&amp;height=366&amp;cropmode=none"
+                    style="
+                      width: 80%;
+                      height: 80%;
+                      max-width: 2000px;
+                      max-height: 1360px;
+                      min-width: 200px;
+                      min-height: 140px;
+                    "
+                  />
                 </a>
-                <p style="font-size: 10px;text-align: center; color: #f78c00;font-weight: 900;"><i>"Cambiamos la Vida de Nuestros Pacientitos"</i></p>                
+                <p
+                  style="
+                    font-size: 10px;
+                    text-align: center;
+                    color: #f78c00;
+                    font-weight: 900;
+                  "
+                >
+                  <i>"Cambiamos la Vida de Nuestros Pacientitos"</i>
+                </p>
               </td>
               <!-- Aquí termina el td del logo -->
               <!-- Estas td (Columna) conforman el separador vertical de color -->
               <td style="width: 13px"></td>
-              <td style="width: 1px; background-color: #f79d00"></td>
+              <td
+                style="
+                  width: 1px;
+                  background-image: linear-gradient(
+                    to bottom,
+                    rgba(247, 157, 0, 0.2),
+                    rgba(247, 157, 0, 1),
+                    rgba(247, 157, 0, 0.2)
+                  );
+                "
+              ></td>
               <td style="width: 13px"></td>
               <!-- Hasta aquí el separador vertical (Verificar si se puede agregar sombra) -->
               <!-- Aqui inicia la tablita de el texto -->
@@ -164,29 +195,32 @@
                     </tr>
                     <tr>
                       <td style="color: #333333; min-width: 250px">
-                       <a
-                          style="color: #333333; text-decoration: none; display: inline"
+                        <a
+                          style="
+                            color: #333333;
+                            text-decoration: none;
+                            display: inline;
+                          "
                           href="mailto:$mail"
                         >
                           <img
-                               id="IconoSobre"
+                            id="IconoSobre"
                             src="https://dsm01pap002files.storage.live.com/y4m9n7SLScl0YDm9mDBhmNU3OnmE3fU8fdkUi9Z6IY6DPXzrVCoqOA6ZOuBNjWieoct12pLKPfunopk8rofBedeV-04vHLqqlUqVvWiR-QSLtXjOZf1CHqAtcGrTDXQ-5nJL7hZlSIbvT7wHEcbENhcQ18wYTcf9J4eD-3h5gsZSqT7uVpQSe24Bkg6-MV6ogr5?width=12&height=12&cropmode=none"
                             style="width: 07%; height: 07%"
-                           
                           />
                           <!-- <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjADovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMi4wMDEgNTEyLjAwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLDApIj4KPHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iIiBkPSJNNDc2LjIzMSw0NjUuNDc1SDE3MS44NDljLTE5LjcyMywwLTM1Ljc2OS0xNi4wNDYtMzUuNzY5LTM1Ljc2OXYtNTAuMTMyICBjMC05Ljg2NCw3Ljk5Ny0xNy44NiwxNy44Ni0xNy44NmgyNTQuMjUybDAuMDQ4LTE2MS4yNDhjMC05Ljg2NCw3Ljk5Ny0xNy44NiwxNy44Ni0xNy44Nmg1MC4xMzIgIGMxOS43MjMsMCwzNS43NjksMTYuMDQ2LDM1Ljc2OSwzNS43Njl2MjExLjMzMUM1MTIsNDQ5LjQyOSw0OTUuOTU0LDQ2NS40NzUsNDc2LjIzMSw0NjUuNDc1eiIgZmlsbD0iI2IyODk2NCIgZGF0YS1vcmlnaW5hbD0iI2IyODk2NCIgY2xhc3M9IiI+PCwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMi4wMDEgNTEyLjAwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLDApIj4KPHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iIiBkPSJNNDc2LjIzMSw0NjUuNDc1SDE3MS44NDljLTE5LjcyMywwLTM1Ljc2OS0xNi4wNDYtMzUuNzY5LTM1Ljc2OXYtNTAuMTMyICBjMC05Ljg2NCw3Ljk5Ny0xNy44NiwxNy44Ni0xNy44NmgyNTQuMjUybDAuMDQ4LTE2MS4yNDhjMC05Ljg2NCw3Ljk5Ny0xNy44NiwxNy44Ni0xNy44Nmg1MC4xMzIgIGMxOS43MjMsMCwzNS43NjksMTYuMDQ2LDM1Ljc2OSwzNS43Njl2MjExLjMzMUM1MTIsNDQ5LjQyOSw0OTUuOTU0LDQ2NS40NzUsNDc2LjIzMSw0NjUuNDc1eiIgZmlsbD0iI2IyODk2NCIgZGF0YS1vcmlnaW5hbD0iI2IyODk2NCIgY2xhc3M9IiI+PC9wYXRoPgo8cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSIiIGQ9Ik00MDguMTkxLDM5Ny40MzVIMTAzLjgwOWMtMTkuNzIzLDAtMzUuNzY5LTE2LjA0Ni0zNS43NjktMzUuNzY5di01MC4xMzIgIGMwLTkuODY0LDcuOTk3LTE3Ljg2LDE3Ljg2LTE3Ljg2aDI1NC4yNTJsMC4wNDYtMTYxLjI0OGMwLTkuODY0LDcuOTk3LTE3Ljg2LDE3Ljg2LTE3Ljg2aDUwLjEzMyAgYzE5LjcyMywwLDM1Ljc2OSwxNi4wNDYsMzUuNzY5LDM1Ljc2OXYyMTEuMzMyQzQ0My45NiwzODEuMzkxLDQyNy45MTUsMzk3LjQzNSw0MDguMTkxLDM5Ny40MzV6IiBmaWxsPSIjZmY5ODAwIiBkYXRhLW9yaWdpbmFsPSIjZmY5ODAwIiBjbGFzcz0iIj48L3BhdGg+CjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9IiIgZD0iTTM0MC4xNTMsMzI5LjM5NUgzNS43NjlDMTYuMDQ2LDMyOS4zOTUsMCwzMTMuMzQ5LDAsMjkzLjYyN1Y4Mi4yOTQgIGMwLTkuNjEsMy43NTctMTguNjMsMTAuNTc5LTI1LjM5M2M2LjkzMy02Ljg3NCwxOC4xMDItNi45MDcsMjUuMDc2LTAuMDczTDE4Ny45NiwyMDYuMDlMMzQwLjI2Niw1Ni44MyAgYzYuOTc0LTYuODM2LDE4LjE0MS02LjgwMSwyNS4wNzYsMC4wNzNjNi44MjIsNi43NjQsMTAuNTc5LDE1Ljc4MiwxMC41NzksMjUuMzkzdjIxMS4zMzEgIEMzNzUuOTIsMzEzLjM0OSwzNTkuODc0LDMyOS4zOTUsMzQwLjE1MywzMjkuMzk1eiIgZmlsbD0iI2ZjZTI3NyIgZGF0YS1vcmlnaW5hbD0iI2ZjZTI3NyIgY2xhc3M9IiI+PC9wYXRoPgo8cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSIiIGQ9Ik0xNzUuNDU5LDI0My44NTRMMTAuNjUzLDgyLjM0MWMtNy4xMTYtNi45NzQtNy4xNDQtMTguNDI4LTAuMDc2LTI1LjQzNyAgYzYuNzQ4LTYuNjkyLDE1LjY5NS0xMC4zNzgsMjUuMTkyLTEwLjM3OGgzMDQuMzg0YzkuNDk3LDAsMTguNDQzLDMuNjg2LDI1LjE5LDEwLjM3OGM3LjA3NSw3LjAxNyw3LjAzMywxOC40NzEtMC4wNzUsMjUuNDM3ICBMMjAwLjQ2MSwyNDMuODU0QzE5My41MTYsMjUwLjY1OSwxODIuNDA0LDI1MC42NjIsMTc1LjQ1OSwyNDMuODU0eiIgZmlsbD0iI2ZkYmYwMCIgZGF0YS1vcmlnaW5hbD0iI2ZkYmYwMCIgY2xhc3M9IiI+PC9wYXRoPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8L2c+PC9zdmc+" style= "width: 07%; height: 07%;" /> -->
                           <span id="Vista_mail">Correo@hospitalmaria.org</span>
-                    </a>
+                        </a>
                       </td>
                     </tr>
                     <tr>
                       <td>
- <img
+                        <img
                           id="iconotel"
                           src="https://dsm01pap002files.storage.live.com/y4mxndlL5ZzvRBYdbwHdzHTqvrOiQmq28-DaGn73jcQbUQaSrNwhil6aKehA8DUd2mDl9tGyQeiD50vIR4sodq8IttzUgqkqqISbasJn33QD_yg7NqNn-C8w_4Jdn8QuQ3FCjAkagnE8hbVegcTD7Cl06TN85svqwcWZa2GLFFhe5xf243onw9M241NVYD1ClHE?width=12&height=12&cropmode=none"
                           style="width: 07%; height: 07%"
-
-                        /> Tel: 2236-0900 
+                        />
+                        Tel: 2236-0900
 
                         <span id="Vista_ext"></span>
                       </td>
@@ -199,23 +233,9 @@
           <tfoot>
             <tr>
               <td colspan="16">
-                <img
-                     id="IconoWWW"
-                  src="https://dsm01pap002files.storage.live.com/y4muMs5UTH0qYARQY98820thAoMdqeiDZa8IQWJQbAKIejzHfkn2TTRAC1Msia8gsu9ofAS-dX0_b6VDr7E0FV7fickvKEsS-ffkaivowCoXLZ3T1tSCJJ4W3oups7xL8ZKI0jdWz_1MG87J3-m_DQBmgfujY2OpG_yxDG2TunIiRjRYGj_vzU30IFGjYpYJOvO?width=12&height=12&cropmode=none"
-                  style="width: 03%; height: 03%"
-                />
-                <span style="font-size: 12px; margin-right: 5%">
-                  <a
-                    href="https://www.hospitalmaria.org/"
-                    target="_blank"
-                    style="text-decoration: none; color: #000"
-                    >https://www.hospitalmaria.org/</a
-                  ></span
-                >
-
                 <br />
                 <img
-                     id="IconoUbicacion"
+                  id="IconoUbicacion"
                   src="https://dsm01pap002files.storage.live.com/y4mou9HtrUySpKlFZCLNAURkhyW2K_W886bKztYaWw4svK7pSWGYyM03sjZV5SLAFYP7hfCaV46-532vecM2fABQ6ZkVxT5hrlc9LCnbBy8I1Rb_jbXl1u1_NyORK0QjAFCaNpF3ClhxJ5dedks8w7poqKFh6b__-wiZoGTvDpGDufQFgy6n_6Hr6q3qUfWfR0u?width=12&height=12&cropmode=none"
                   style="width: 03%; height: 03%"
                 />
@@ -223,6 +243,81 @@
                   >Anillo Periférico Contiguo a Residencial Suyapita,
                   Tegucigalpa, MDC.</span
                 >
+                <br />
+                <div style="justify-content: space-between; width: 100%">
+                  <img
+                    id="IconoWWW"
+                    src="https://dsm01pap002files.storage.live.com/y4muMs5UTH0qYARQY98820thAoMdqeiDZa8IQWJQbAKIejzHfkn2TTRAC1Msia8gsu9ofAS-dX0_b6VDr7E0FV7fickvKEsS-ffkaivowCoXLZ3T1tSCJJ4W3oups7xL8ZKI0jdWz_1MG87J3-m_DQBmgfujY2OpG_yxDG2TunIiRjRYGj_vzU30IFGjYpYJOvO?width=12&height=12&cropmode=none"
+                    style="width: 03%; height: 03%"
+                  />
+                  <span style="font-size: 12px; margin-right: 5%">
+                    <a
+                      href="https://www.hospitalmaria.org/"
+                      target="_blank"
+                      style="text-decoration: none; color: #000"
+                      >https://www.hospitalmaria.org/
+                    </a>
+
+                    <span id="iconos_RRSS">
+                      <label for="" style="font-size: 12px;">¡Siguenos!  </label>
+                      <a
+                        href="https://www.facebook.com/hospitalmariaep"
+                        target="_blank"
+                      >
+                        <img
+                          id="Icono_Facebook"
+                          src="https://dsm01pap002files.storage.live.com/y4mZiI7N-lX7DzsdOmGQqyNUDIjSDboyv7aaRV2B8tB_dET7cFJiuS1kZAag8InGEHLT5ToiHOn4NrwNEIcMLV8Ld34qsTDVCVMMGeABH8o04ApZrtnMLbpjKTttIpzhzaWz1zSmGOZjrykVvqPtuaAj5kGH-MsbEUcRvq1YM2iNPx4kNvVIelAAw9q73t13VbN?width=16&height=16&cropmode=none"
+                          width="16"
+                          height="16"
+                        />
+                      </a>
+                      <a
+                        href="https://www.instagram.com/hospital_maria/"
+                        target="_blank"
+                      >
+                        <img
+                          id="Icono_IG"
+                          src="https://dsm01pap002files.storage.live.com/y4mvrJc8kN3jqp7gK5FqPaCi4AE94GHgxeEIyPP5qC6P4_8vkvVTqJwFoaHHtbScOAqWp21zTEmU1lzq_XKzuFBOm-glni-FNj7FqNd-XHEwjlOs01rveJwjA4b2IzhlbRFRME7nLjmVqgi3LFKa2k7Wo9IJwsJVDmkDcu4CXwGeusV8i-aiIgC6VMNeY56bbqg?width=16&height=16&cropmode=none"
+                          width="16"
+                          height="16"
+                        />
+                      </a>
+                      <a
+                        href="https://twitter.com/Hospital_Maria"
+                        target="_blank"
+                      >
+                        <img
+                          id="Icono_Twitter"
+                          src="https://dsm01pap002files.storage.live.com/y4mMZAxU9lOh4-MmL7e0OW-Uayg4Rl3hGPfIZF8Wv6QCA2XXatdPrniODXm2fqs5G5OUHCLua7w5xlCjsIEW1vU14rZcUHqzpRwzkXlFP8MqTL5hlAseiybnn0wVuOB92XvbgGgTayOqeURDNrmjTWx2CAw30Q1x7kLnEdSEsj1YxBgJW07iKnGz3vrmIrkhwTI?width=16&height=16&cropmode=none"
+                          width="16"
+                          height="16"
+                        />
+                      </a>
+                      <a
+                        href="https://www.youtube.com/channel/UCP6IG7QpdkD5eFk96pk_FoA?view_as=subscriber"
+                        target="_blank"
+                      >
+                        <img
+                          id="Icono_YouTube"
+                          src="https://dsm01pap002files.storage.live.com/y4mz4WtJYF87JtkEnyRNUDzrtlr2GGInJtdWcEQhjlwEjRpf098tJQmddRmFinacFJVshcI8xcGxfZuudwkuoylK3ZizKRDcRWywx7XS-d9c_H3N5ZLZQLrCVsdg0aXrdukU23Tm5mqGCT9GYGwqDA3WN_lBcO05Mfj1aLqF9KO3gozqky_chVZ-oO_7BaJE7Z0?width=16&height=16&cropmode=none"
+                          width="16"
+                          height="16"
+                        />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/company/fundaci%C3%B3n-amigos-del-hospital-mar%C3%ADa/mycompany/"
+                        target="_blank"
+                      >
+                        <img
+                          id="Icono_LinkedIn"
+                          src="https://dsm01pap002files.storage.live.com/y4mvOcE_45f80Cvka6xB1K98dX2dLzLml2amyebaO9ro9324p3aBmTCgfsGf5QhLgTaD-NUpcXGV3sX-O0DaNtY4frZLQjOQIo2KkOS9i7mIOHomO0tWfJUSh3jcxv5EhNeT77zeCSgFjagA_lYnV-mgxRgy7CbH4zc0LkzZKx1A_ocEFnc8wyfifMO40FZ0h4r?width=16&height=16&cropmode=none"
+                          width="16"
+                          height="16"
+                        />
+                      </a> 
+                      </span>
+                    </span>
+                </div>
               </td>
             </tr>
           </tfoot>
