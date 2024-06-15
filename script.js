@@ -1,63 +1,28 @@
-function V_nombre(texto) {
-  document.querySelector("#Vista_nombre").innerHTML = texto;
-}
-function V_Puesto(texto) {
-  document.querySelector("#Vista_puesto").innerHTML = texto;
+document.getElementById('signatureForm').addEventListener('input', updatePreview);
+document.getElementById('signatureForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    copySignature();
+});
+
+function updatePreview() {
+    document.getElementById('previewNombre').innerText = document.getElementById('nombre').value || 'Nombre del colaborador';
+    document.getElementById('previewPuesto').innerText = document.getElementById('puesto').value || 'Puesto de trabajo';
+    document.getElementById('previewDept').innerText = document.getElementById('departamento').value || 'Departamento';
+    document.getElementById('previewCorreo').innerText = document.getElementById('correo').value || 'correo@hospitalmaria.com';
+    document.getElementById('previewCorreo').href = 'mailto:' + (document.getElementById('correo').value || 'correo@hospitalmaria.com');
+    const extension = document.getElementById('extension').value;
+    document.getElementById('previewExt').innerText = extension ? `Ext: ${extension}` : '';
 }
 
-//La siguiente funcion la definí para que cargué el texto y el icono por ser opcional-
-function V_cel(texto) {
-  if (texto != "") {
-    document.querySelector("#Vista_cel").innerHTML = "+504 " + texto;
-    var x = document.querySelector("#iconocel");
-    x.style.display = "inline";
-  } else {
-    document.querySelector("#Vista_cel").innerHTML = texto;
-    var x = document.querySelector("#iconocel");
-    x.style.display = "none";
-  }
-}
-
-function V_Ext(texto) {
-  if (texto != "") {
-    document.querySelector("#Vista_ext").innerHTML = " ext: " + texto;
-    /*var x = document.querySelector("#iconotel");
-    x.style.display = "inline";
-  } else {
-    document.querySelector("#Vista_ext").innerHTML = texto;
-    var x = document.querySelector("#iconotel");
-    x.style.display = "none";*/
-  }
-}
-function V_dept(texto) {
-  document.querySelector("#Vista_departamento").innerHTML = texto;
-}
-function V_mail(texto) {
-  document.querySelector("#Vista_mail").innerHTML = texto;
-}
-/*function ejecutar(idelemento){
-  var aux = document.createElement("div");
-  aux.setAttribute("contentEditable", true);
-  aux.innerHTML = document.getElementById(idelemento).innerHTML;
-  aux.setAttribute("onfocus", "document.execCommand('selectAll',false,null)"); 
-  document.body.appendChild(aux);
-  aux.focus();
-  document.execCommand("copy");
-  document.body.removeChild(aux);
-  document.getElementById('Copiar').innerText="¡Copiado!";
-}*/
-
-
-function ejecutar(idelemento){
-  var aux = document.createElement("div");
-  var tabla = document.getElementById(idelemento).cloneNode(true);
-  tabla.style.backgroundColor = "#fff"; // agregar un fondo blanco a la tabla
-  aux.appendChild(tabla); // envolver la tabla en un div contenedor
-  aux.setAttribute("contentEditable", true);
-  aux.setAttribute("onfocus", "document.execCommand('selectAll',false,null)"); 
-  document.body.appendChild(aux);
-  aux.focus();
-  document.execCommand("copy");
-  document.body.removeChild(aux);
-  document.getElementById('Copiar').innerText="¡Copiado!";
+function copySignature() {
+    const signature = document.getElementById('signaturePreview').innerHTML;
+    const tempInput = document.createElement('div');
+    tempInput.contentEditable = true;
+    tempInput.innerHTML = signature;
+    document.body.appendChild(tempInput);
+    tempInput.focus();
+    document.execCommand('selectAll');
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    alert('Firma copiada al portapapeles!');
 }
