@@ -87,3 +87,26 @@ body {
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* Final formato para toddas las plantillas de firmas */
+
+
+
+/* inicio plantilla 1 de firma */
+.firma1texto{
+          border:0; 
+          padding:0; 
+					color:#4c4b4c;
+					font-size:13px;
+					font-family:arial,helvetica neue,helvetica,sans-serif;
+
+  } 
+
+/* final plantilla 1 de firma */
+
+

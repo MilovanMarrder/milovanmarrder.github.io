@@ -26,3 +26,4 @@ function copySignature() {
     document.body.removeChild(tempInput);
     alert('Firma copiada al portapapeles!');
 }
+/*  Prue*/
