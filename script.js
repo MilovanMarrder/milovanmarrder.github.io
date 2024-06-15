@@ -61,3 +61,4 @@ function ejecutar(idelemento){
   document.body.removeChild(aux);
   document.getElementById('Copiar').innerText="¡Copiado!";
 }
+/*  Prue*/
