@@ -60,3 +60,4 @@ function ejecutar(idelemento){
   document.execCommand("copy");
   document.body.removeChild(aux);
   document.getElementById('Copiar').innerText="¡Copiado!";
+}
