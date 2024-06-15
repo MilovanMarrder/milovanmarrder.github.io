@@ -1,5 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
+  <head>
+    <link rel="stylesheet" href="estilo.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de firma</title>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <body class="bodygenerador">
+    <!-- En el siguiente div clase formulario tengo contenido el formulario //  También necesario para posicionamiento en pagina -->
+    <div>
+      <form class="formulario">
+        <h2 style="color: rgba(22, 17, 38, 0.9); text-align: center">
+          DATOS PARA TU FIRMA
+        </h2>
+        <div>
+          <div class="row">
+            <div class="col">
+              <!-- nombre del empleado // campo 1/6 -->
+              <input
+                type="text"
+                id="nombre"
+                placeholder="Ingresa el nombre a mostrar"
+                onkeyup="V_nombre(this.value)"
+              />
+=======
 <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
@@ -14,6 +42,7 @@
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" placeholder="Ingresa el nombre" required>
+
             </div>
             <div class="form-group">
                 <label for="puesto">Puesto:</label>
