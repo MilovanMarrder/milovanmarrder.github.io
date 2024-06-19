@@ -47,7 +47,7 @@ function V_mail(texto) {
   document.getElementById('Copiar').innerText="¡Copiado!";
 }*/
 
-
+/*
 function ejecutar(idelemento){
   var aux = document.createElement("div");
   var tabla = document.getElementById(idelemento).cloneNode(true);
@@ -60,4 +60,37 @@ function ejecutar(idelemento){
   document.execCommand("copy");
   document.body.removeChild(aux);
   document.getElementById('Copiar').innerText="¡Copiado!";
+}
+*/
+
+function ejecutar(idelemento) {
+  // Crear un contenedor temporal
+  var aux = document.createElement("div");
+  // Clonar el elemento con el id especificado
+  var tabla = document.getElementById(idelemento).cloneNode(true);
+  // Asegurarse de que los estilos se mantengan
+  tabla.style.backgroundColor = "#fff"; // agregar un fondo blanco a la tabla
+  aux.appendChild(tabla); // envolver la tabla en un div contenedor
+  
+  // Hacer que el contenedor sea editable y seleccionable
+  aux.setAttribute("contentEditable", true);
+  aux.style.position = "absolute";
+  aux.style.left = "-9999px";
+  document.body.appendChild(aux);
+  
+  // Seleccionar y copiar el contenido
+  var range = document.createRange();
+  range.selectNodeContents(aux);
+  var sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+  
+  // Copiar al portapapeles
+  document.execCommand("copy");
+  
+  // Eliminar el contenedor temporal
+  document.body.removeChild(aux);
+  
+  // Cambiar el texto del botón (opcional)
+  document.getElementById('Copiar').innerText = "¡Copiado!";
 }
