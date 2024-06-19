@@ -68,10 +68,84 @@ function ejecutar(idelemento) {
   var aux = document.createElement("div");
   // Clonar el elemento con el id especificado
   var tabla = document.getElementById(idelemento).cloneNode(true);
-  // Asegurarse de que los estilos se mantengan
-  tabla.style.backgroundColor = "#fff"; // agregar un fondo blanco a la tabla
   aux.appendChild(tabla); // envolver la tabla en un div contenedor
   
+  // Aplicar los estilos al contenedor temporal
+  tabla.style.backgroundColor = "rgb(255, 255, 255)";
+  tabla.style.borderCollapse = "collapse";
+  tabla.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.2)";
+
+  // Modificar los estilos de los elementos internos de la tabla clonada
+  var logoImg = tabla.querySelector('.logofirma');
+  if (logoImg) {
+    logoImg.style.width = "80%";
+    logoImg.style.height = "80%";
+    logoImg.style.maxWidth = "300px";
+    logoImg.style.maxHeight = "272px";
+    logoImg.style.minWidth = "200px";
+    logoImg.style.minHeight = "auto";
+  }
+
+  var pElement = tabla.querySelector('p');
+  if (pElement) {
+    pElement.style.fontSize = "10px";
+    pElement.style.textAlign = "center";
+    pElement.style.color = "#f78c00";
+    pElement.style.fontWeight = "900";
+  }
+
+  var separatorCells = tabla.querySelectorAll('td[style*="background-image"]');
+  separatorCells.forEach(function(cell) {
+    cell.style.width = "1px";
+    cell.style.backgroundImage = "linear-gradient(to bottom, rgba(247, 157, 0, 0.2), rgba(247, 157, 0, 1), rgba(247, 157, 0, 0.2))";
+  });
+
+  var textCells = tabla.querySelectorAll('.firma1texto td');
+  textCells.forEach(function(cell) {
+    if (cell.textContent.includes("Nombre del colaborador")) {
+      cell.style.fontSize = "16px";
+      cell.style.color = "#000";
+      cell.style.fontWeight = "bold";
+    } else if (cell.textContent.includes("Puesto de trabajo") || cell.textContent.includes("Departamento")) {
+      cell.style.color = "#4c4b4c";
+      cell.style.fontWeight = "bold";
+      cell.style.fontSize = "11px";
+    } else if (cell.style.height === "14px") {
+      cell.style.color = "#333333";
+    }
+  });
+
+  var emailLink = tabla.querySelector('a[href^="mailto"]');
+  if (emailLink) {
+    emailLink.style.color = "#333333";
+    emailLink.style.textDecoration = "none";
+    emailLink.style.display = "inline";
+  }
+
+  var emailIcon = tabla.querySelector('#IconoSobre');
+  if (emailIcon) {
+    emailIcon.style.width = "7%";
+    emailIcon.style.height = "7%";
+  }
+
+  var telIcon = tabla.querySelector('#iconotel');
+  if (telIcon) {
+    telIcon.style.width = "7%";
+    telIcon.style.height = "7%";
+  }
+
+  var locationIcon = tabla.querySelector('#IconoUbicacion');
+  if (locationIcon) {
+    locationIcon.style.width = "3%";
+    locationIcon.style.height = "3%";
+  }
+
+  var wwwIcon = tabla.querySelector('#IconoWWW');
+  if (wwwIcon) {
+    wwwIcon.style.width = "3%";
+    wwwIcon.style.height = "3%";
+  }
+
   // Hacer que el contenedor sea editable y seleccionable
   aux.setAttribute("contentEditable", true);
   aux.style.position = "absolute";
@@ -94,3 +168,5 @@ function ejecutar(idelemento) {
   // Cambiar el texto del botón (opcional)
   document.getElementById('Copiar').innerText = "¡Copiado!";
 }
+
+
